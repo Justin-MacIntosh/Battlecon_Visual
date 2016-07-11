@@ -1,0 +1,125 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta charset="utf-8" />
+        <title>Battlecon Interactive</title>
+
+        <!--Custom Stylesheets-->
+        <link rel="stylesheet" type="text/css" href="css/general.css"           >
+        <link rel="stylesheet" type="text/css" href="css/images.css"            >
+        <link rel="stylesheet" type="text/css" href="css/font.css"              >
+        <link rel="stylesheet" type="text/css" href="css/property_statistic.css">
+        <link rel="stylesheet" type="text/css" href="css/tables.css"            >
+
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+        <link href="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.css" type="text/css" rel="stylesheet"/>
+    </head>
+    <body>
+        <!--Main Header-->
+        <p align="center" class="battlecon_fonted section_head_p">
+            <font id="style_header" onclick="style_header_click()">Styles</font>/<font id="base_header" onclick="base_header_click()" class="title_selected">Bases</font>
+        </p>
+
+        <!--Base Table-->
+        <table style="width:1400px" class="base_table" align="center" id="bases_display">
+            <tr id="bases_display_row">
+            </tr>
+        </table>
+
+        <!--Style Table-->
+        <table style="width:1400px; display:none" class="style_table" align="center" id="styles_display">
+            <tr id="styles_display_row"></tr>
+        </table>
+
+        <!--Pair Header-->
+        <p align="center" class="battlecon_fonted pair_head_p">Attack Pair</p>
+
+        <!--Character Buttons-->
+        <div style="float: right; padding-right:100px">
+            <button onclick="character_select('devestation/eligor_larington.xml')"><h1>Eligor</h1></button><br/>
+            <button onclick="character_select('devestation/shekhtur_lenmore.xml')"><h1>Shekhtur</h1></button>
+        </div>
+
+        <!--Statistics-->
+        <div style="text-align: right; float:right; width:300px; padding-right:100px; font-size:25px">
+            <h3 id="ran" class="statistic">
+                <u>Range:</u>
+                <span class="value"></span>
+                <span class="sval stat"></span>
+                <span class="bval stat"></span>
+            </h3>
+            <h3 id="pow" class="statistic">
+                <u>Power:</u>
+                <span class="value"></span>
+                <span class="sval stat"></span>
+                <span class="bval stat"></span>
+            </h3>
+            <h3 id="pri" class="statistic">
+                <u>Priority:</u>
+                <span class="value"></span>
+                <span class="sval stat"></span>
+                <span class="bval stat"></span>
+            </h3>
+        </div>
+
+        <!--Properties-->
+        <div style="float: left; padding-left:5%" class="property_box">
+            <h3 id="per" class="property">
+                <u class="property_header">Persistent Effects</u>        
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+            <h3 id="rev" class="property">
+                <u class="property_header">Reveal</u>
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+            <h3 id="sob" class="property">
+                <u class="property_header">Start of Beat</u>     
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+            <h3 id="bac" class="property">
+                <u class="property_header">Before Activating</u> 
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+            <h3 id="ohi" class="property">
+                <u class="property_header">On Hit</u>            
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+            <h3 id="oda" class="property">
+                <u class="property_header">On Damage</u>         
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+            <h3 id="aac" class="property">
+                <u class="property_header">After Activating</u>  
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+            <h3 id="eob" class="property">
+                <u class="property_header">End of Beat</u>       
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+        </div>
+
+        <!--Style and Base Pair-->
+        <div class="pair">
+            <img src='' class='pair_style'/>
+            <img src='' class='pair_base'/>
+        </div>
+
+        <!--Scripts from the script folder-->
+        <script src="/script/startup.js"          ></script>
+        <script src="/script/click_handlers.js"   ></script>
+        <script src="/script/character_button.js" ></script>
+    </body>
+</html>

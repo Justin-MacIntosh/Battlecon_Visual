@@ -1,0 +1,100 @@
+<cards>
+  <!-- 'Properties' Types -->
+  <!-- reveal             -->
+  <!-- start_of_beat      -->
+  <!-- before_activating  -->
+  <!-- on_hit             -->
+  <!-- on_damage          -->
+  <!-- after_activating   -->
+  <!-- end_of_beat        -->
+  <!-- persistent         -->
+
+  <!-- Eligor Style VENGEFUL -->
+  <card>
+    <name>Vengeful</name>
+    <image>img/eligor_larington/eligor_vengeful.png</image>
+    <statistics>
+      <range>0</range>
+      <power>1</power>
+      <priority>0</priority>
+    </statistics>
+    <properties>
+      <persistent>Stun Guard 3, Eligor ignores all movement applied to him by opponents this beat</persistent>
+      <before_activating>Advance 1 Space</before_activating>
+      <on_hit>Gain 2 Vengeance Tokens</on_hit>
+    </properties>
+  </card>
+
+  <!-- Eligor Style COUNTER -->
+  <card>
+    <name>Counter</name>
+    <image>img/eligor_larington/eligor_counter.png</image>
+    <statistics>
+      <range>0</range>
+      <power>1</power>
+      <priority>-1</priority>
+    </statistics>
+    <properties>
+      <start_of_beat>If an opponent's base has the same name as yours, that opponent is stunned.</start_of_beat>
+      <before_activating>If you took damage this beat, advance up to 1 space for each point of damage taken.</before_activating>
+    </properties>
+  </card>
+
+  <!-- Eligor Style MARTIAL -->
+  <card>
+    <name>Martial</name>
+    <image>img/eligor_larington/eligor_martial.png</image>
+    <statistics>
+      <range>0,1</range>
+      <power>1</power>
+      <priority>-1</priority>
+    </statistics>
+    <properties>
+      <before_activating>This attack has +2 Power if you have taken damage during this beat and +2 additional Power if you have 5 Vengeance Tokens in your token pool.</before_activating>
+    </properties>
+  </card>
+
+  <!-- Eligor Style RETRIBUTION -->
+  <card>
+    <name>Retribution</name>
+    <image>img/eligor_larington/eligor_retribution.png</image>
+    <statistics>
+      <range>0</range>
+      <power>0</power>
+      <priority>-1</priority>
+    </statistics>
+    <properties>
+      <persistent>Soak 2, gain a Vengeance Token for each point of damage soaked (max 2).</persistent>
+      <before_activating>If you were hit during this beat, you may move directly to any space adjacent to an opponent who hit you.</before_activating>
+    </properties>
+  </card>
+
+  <!-- Eligor Style CHAINED -->
+  <card>
+    <name>Chained</name>
+    <image>img/eligor_larington/eligor_chained.png</image>
+    <statistics>
+      <range>0</range>
+      <power>0</power>
+      <priority>-1</priority>
+    </statistics>
+    <properties>
+      <before_activating>Discard any number of Vengeance tokens to pull the opponent 1 space per token discarded.</before_activating>
+    </properties>
+  </card>
+
+  <!-- Eligor Unique Base AEGIS -->
+  <!--<card>
+    <name>Aegis</name>
+    <image>img/eligor_larington/eligor_vengeful.jpg</image>
+    <statistics>
+      <range>1</range>
+      <power>X</power>
+      <priority>0</priority>
+    </statistics>
+    <properties>
+      <persistent>The power of this base is equal to the printed power of the nearest opponent's attack pair. (0 if X or N/A)</persistent>
+      <reveal>Soak 1 for each Vengeance Token you anted during this beat.</reveal>
+    </properties>
+  </card>-->
+</cards>

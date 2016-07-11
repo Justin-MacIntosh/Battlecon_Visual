@@ -1,0 +1,100 @@
+<cards>
+  <!-- 'Properties' Types -->
+  <!-- reveal             -->
+  <!-- start_of_beat      -->
+  <!-- before_activating  -->
+  <!-- on_hit             -->
+  <!-- on_damage          -->
+  <!-- after_activating   -->
+  <!-- end_of_beat        -->
+  <!-- persistent         -->
+
+  <!-- Shekhtur Style UNLEASHED -->
+  <card>
+    <name>Unleashed</name>
+    <image>img/shekhtur_lenmore/shekhtur_unleashed.png</image>
+    <statistics>
+      <range>0,1</range>
+      <power>-1</power>
+      <priority>0</priority>
+    </statistics>
+    <properties>
+      <after_activating>Retreat 1 or 2 Spaces</after_activating>
+      <end_of_beat>Gain 2 Malice Tokens. You have +1 Power next beat.</end_of_beat>
+    </properties>
+  </card>
+
+  <!-- Shekhtur Style COMBINATION -->
+  <card>
+    <name>Combination</name>
+    <image>img/shekhtur_lenmore/shekhtur_combination.png</image>
+    <statistics>
+      <range>0</range>
+      <power>2</power>
+      <priority>0</priority>
+    </statistics>
+    <properties>
+      <persistent>This attack does not his opponents at range 3 or greater. This attack ignores Soak if your priority is 7 or greater.</persistent>
+      <on_hit>If you hit the opponent last beat, this attack has +2 Power.</on_hit>
+    </properties>
+  </card>
+
+  <!-- Shekhtur Style JUGULAR -->
+  <card>
+    <name>Jugular</name>
+    <image>img/shekhtur_lenmore/shekhtur_jugular.png</image>
+    <statistics>
+      <range>0</range>
+      <power>1</power>
+      <priority>2</priority>
+    </statistics>
+    <properties>
+      <on_hit>Move the opponent 1 space.</on_hit>
+      <end_of_beat>Gain or lose Malice Tokens until you have exactly 5.</end_of_beat>
+    </properties>
+  </card>
+
+  <!-- Shekhtur Style REAVER -->
+  <card>
+    <name>Reaver</name>
+    <image>img/shekhtur_lenmore/shekhtur_reaver.png</image>
+    <statistics>
+      <range>0,1</range>
+      <power>0</power>
+      <priority>0</priority>
+    </statistics>
+    <properties>
+      <on_damage>Push the opponent one space per point of damage dealt.</on_damage>
+      <end_of_beat>Advance 1 or 2 spaces.</end_of_beat>
+    </properties>
+  </card>
+
+  <!-- Shekhtur Style SPIRAL -->
+  <card>
+    <name>Spiral</name>
+    <image>img/shekhtur_lenmore/shekhtur_spiral.png</image>
+    <statistics>
+      <range>0</range>
+      <power>0</power>
+      <priority>-1</priority>
+    </statistics>
+    <properties>
+      <before_activating>Advance up to three spaces. You have -1 Power for each space moved by this effect (to a minimum of 0).</before_activating>
+    </properties>
+  </card>
+
+  <!-- Shekhtur Unique Base BRAND -->
+  <!--<card>
+    <name>Brand</name>
+    <image>img/shekhtur_lenmore/shekhtur_brand.png</image>
+    <statistics>
+      <range>1,2</range>
+      <power>3</power>
+      <priority>2</priority>
+    </statistics>
+    <properties>
+      <persistent>This attack ignores Stun Guard if your priority is 6 or greater.</persistent>
+      <after_activating>If this attack hit, you may spend 2 or 4 Malice Tokens. For every 2 tokens you spend, the opponent you hit loses 1 life and you gain 1 life</after_activating>
+    </properties>
+  </card>-->
+</cards>

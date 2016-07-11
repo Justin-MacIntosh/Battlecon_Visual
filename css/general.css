@@ -1,0 +1,33 @@
+.thumbnail:hover {
+    position:relative;
+    top:-25px; left:-35px;
+    width:500px; height:auto;
+    display:block; z-index:999;
+}
+body:after {
+    content : ""; display: block;
+    position: absolute;
+    top: 0; left: 0;
+    background-image: url(/img/bckgrnd.jpg);
+    background-position: center center;
+    background-size:     cover;
+    width: 100%; height: 100%;
+    opacity : 0.65; z-index: -1;
+}
+
+.section_head_p {
+     font-size:400%;
+     margin-bottom:-30px;
+     margin-top:30px;
+     display:table;
+     margin:0 auto;
+}
+.pair_head_p {
+     font-size:400%;
+     margin-bottom:-20px;
+     margin-top:0px;
+}
+
+.title_selected {
+    text-decoration:underline;
+}

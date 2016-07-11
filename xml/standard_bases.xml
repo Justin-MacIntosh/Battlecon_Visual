@@ -1,0 +1,95 @@
+<cards>
+  <!-- 'Properties' Types -->
+  <!-- reveal             -->
+  <!-- start_of_beat     -->
+  <!-- before_activating -->
+  <!-- on_hit            -->
+  <!-- on_damage         -->
+  <!-- after_activating  -->
+  <!-- end_of_beat       -->
+  <!-- persistent        -->
+    
+  <!-- Standard Base STRIKE -->
+  <card>
+    <name>Strike</name>
+    <image>img/standard_bases/base_strike.png</image>
+    <statistics>
+      <range>1</range>
+      <power>4</power>
+      <priority>3</priority>
+    </statistics>
+    <properties>
+      <persistent>Stun Guard 5</persistent>
+    </properties>
+  </card>
+  
+  <!-- Standard Base DRIVE -->
+  <card>
+    <name>Drive</name>
+    <image>img/standard_bases/base_drive.png</image>
+    <statistics>
+      <range   >1</range>
+      <power   >3</power>
+      <priority>4</priority>
+    </statistics>
+    <properties>
+      <before_activating>Advance 1 or 2 Spaces.</before_activating>
+    </properties>
+  </card>
+
+  <!-- Standard Base GRASP -->
+  <card>
+    <name>Grasp</name>
+    <image>img/standard_bases/base_grasp.png</image>
+    <statistics>
+      <range   >1</range>
+      <power   >2</power>
+      <priority>5</priority>
+    </statistics>
+    <properties>
+      <on_hit>Move the opponent 1 space.</on_hit>
+    </properties>
+  </card>
+
+  <!-- Standard Base SHOT -->
+  <card>
+    <name>Shot</name>
+    <image>img/standard_bases/base_shot.png</image>
+    <statistics>
+      <range   >1,2,3,4</range>
+      <power   >3</power>
+      <priority>2</priority>
+    </statistics>
+    <properties>
+      <persistent>Stun Guard 2</persistent>
+    </properties>
+  </card>
+
+  <!-- Standard Base BURST -->
+  <card>
+    <name>Shot</name>
+    <image>img/standard_bases/base_burst.png</image>
+    <statistics>
+      <range   >2,3</range>
+      <power   >3</power>
+      <priority>1</priority>
+    </statistics>
+    <properties>
+      <start_of_beat>Retreat 1 or 2 spaces.</start_of_beat>
+    </properties>
+  </card>
+
+  <!-- Standard Base DASH -->
+  <card>
+    <name>Dash</name>
+    <image>img/standard_bases/base_dash.png</image>
+    <statistics>
+      <range   >N/A</range>
+      <power   >N/A</power>
+      <priority>9</priority>
+    </statistics>
+    <properties>
+      <after_activating>Move 1, 2, or 3 spaces. If you moved past an opponent during this movement, that opponent cannot hit you during this beat.</after_activating>
+    </properties>
+  </card>
+</cards>
