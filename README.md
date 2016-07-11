@@ -20,8 +20,8 @@ Two characters are able to be chosen at this point, Eligor Larington and Shekhtu
 By pressing the Style and Base Headers of the page, a user can flip between selecting the current style and selecting the current base.
 
 ##Future Additions
-*Unique Bases
-*Unique Abilities
-*Range Example
-*Larger Character Selection
-*Lore Snippets per Character
+* Unique Bases
+* Unique Abilities
+* Range Example
+* Larger Character Selection
+* Lore Snippets per Character
