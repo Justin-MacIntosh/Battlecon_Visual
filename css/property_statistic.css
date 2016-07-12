@@ -45,6 +45,7 @@ div.secret p {
     border-width: 2px;
     border-color: black;
     border-radius: 3px;
+    margin-bottom: 7px;
     background-color: rgba(26, 31, 50, 1);
 }
 .sval.stat {
