@@ -58,6 +58,8 @@ div.secret p {
     border-color: rgb(14, 19, 38) !important;
     background-color: rgb(16, 21, 40) !important;
     background-image:none;
+    border-radius: 15px !important;
+    margin: 3px;
 }
 
 .btn-danger:hover
