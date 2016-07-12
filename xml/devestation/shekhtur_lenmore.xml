@@ -34,7 +34,7 @@
       <priority>0</priority>
     </statistics>
     <properties>
-      <persistent>This attack does not his opponents at range 3 or greater. This attack ignores Soak if your priority is 7 or greater.</persistent>
+      <persistent>This attack does not hit opponents at range 3 or greater. This attack ignores Soak if your priority is 7 or greater.</persistent>
       <on_hit>If you hit the opponent last beat, this attack has +2 Power.</on_hit>
     </properties>
   </card>
@@ -50,7 +50,7 @@
     </statistics>
     <properties>
       <on_hit>Move the opponent 1 space.</on_hit>
-      <end_of_beat>Gain or lose Malice Tokens until you have exactly 5.</end_of_beat>
+      <end_of_beat>Gain or lose Malice Tokens until you have exactly 3.</end_of_beat>
     </properties>
   </card>
 
