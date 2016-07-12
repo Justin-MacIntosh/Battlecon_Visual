@@ -1,7 +1,6 @@
 function character_select(character_xml) {
     if (character_selected) {
         if (character_xml == current_xml) {
-            style_header_click();
             return;
         }
     }

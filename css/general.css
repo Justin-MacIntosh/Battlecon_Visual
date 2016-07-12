@@ -22,7 +22,6 @@ body:after {
      margin-right: auto;
      margin-left: auto;
      display:table;
-     z-index:-1;
 }
 .pair_head_p {
      font-size:400%;
@@ -30,7 +29,6 @@ body:after {
      margin-top: 40px;
      margin-right: auto;
      margin-left: auto;
-     z-index:-1;
 }
 
 .title_selected {
