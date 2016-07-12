@@ -34,11 +34,11 @@
 
 
 /* Style and Base Pair */
-.pair { width: 340px; margin: auto; padding-top:40px; }
+.pair { margin: auto; padding-top:40px; text-align:center; }
 
 .pair .pair_style { 
     transition: all .2s ease-in-out; 
-    width:125px; 
+    width:165px;
     height:175px; 
     padding-right: 40px; 
     border-radius: 3px; 
@@ -47,7 +47,7 @@
 
 .pair .pair_base  { 
     transition: all .2s ease-in-out; 
-    width:125px; 
+    width:165px;
     height:175px; 
     padding-left: 40px; 
     border-radius: 3px; 

@@ -12,22 +12,29 @@ body:after {
     background-position: center center;
     background-size:     cover;
     width: 100%; height: 100%;
-    opacity : 0.65; z-index: -1;
+    opacity : 0.65; z-index: -2;
 }
 
 .section_head_p {
      font-size:400%;
-     margin-bottom:-30px;
+     margin-bottom:40px;
      margin-top:30px;
+     margin-right: auto;
+     margin-left: auto;
      display:table;
-     margin:0 auto;
 }
 .pair_head_p {
      font-size:400%;
-     margin-bottom:-20px;
-     margin-top:0px;
+     margin-bottom:40px;
+     margin-top: 40px;
+     margin-right: auto;
+     margin-left: auto;
 }
 
 .title_selected {
     text-decoration:underline;
+}
+
+body {
+    color: #000;
 }

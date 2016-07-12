@@ -5,48 +5,103 @@
         <meta charset="utf-8" />
         <title>Battlecon Interactive</title>
 
-        <!--Custom Stylesheets-->
-        <link rel="stylesheet" type="text/css" href="css/general.css"           >
-        <link rel="stylesheet" type="text/css" href="css/images.css"            >
-        <link rel="stylesheet" type="text/css" href="css/font.css"              >
-        <link rel="stylesheet" type="text/css" href="css/property_statistic.css">
-        <link rel="stylesheet" type="text/css" href="css/tables.css"            >
-
         <!--JQuery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
         <link href="//cdn.rawgit.com/noelboss/featherlight/1.5.0/release/featherlight.min.css" type="text/css" rel="stylesheet"/>
+
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" 
+              integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" 
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" 
+              integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" 
+              crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" 
+                integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" 
+                crossorigin="anonymous"></script>
+
+        <!--Custom Stylesheets-->
+        <link rel="stylesheet" type="text/css" href="css/general.css">
+        <link rel="stylesheet" type="text/css" href="css/images.css">
+        <link rel="stylesheet" type="text/css" href="css/font.css">
+        <link rel="stylesheet" type="text/css" href="css/property_statistic.css">
+        <link rel="stylesheet" type="text/css" href="css/tables.css">
     </head>
     <body>
         <!--Main Header-->
-        <p align="center" class="battlecon_fonted section_head_p">
+        <p align="center" class="battlecon_fonted section_head_p col-md-12">
             <font id="style_header" onclick="style_header_click()">Styles</font>/<font id="base_header" onclick="base_header_click()" class="title_selected">Bases</font>
         </p>
 
         <!--Base Table-->
-        <table style="width:1400px" class="base_table" align="center" id="bases_display">
+        <table style="" class="base_table col-md-12" align="center" id="bases_display">
             <tr id="bases_display_row">
             </tr>
         </table>
 
         <!--Style Table-->
-        <table style="width:1400px; display:none" class="style_table" align="center" id="styles_display">
+        <table style="" display:none" class="style_table col-md-12" align="center" id="styles_display">
             <tr id="styles_display_row"></tr>
         </table>
 
         <!--Pair Header-->
-        <p align="center" class="battlecon_fonted pair_head_p">Attack Pair</p>
+        <p align="center" class="battlecon_fonted pair_head_p col-md-12">Attack Pair</p>
 
-        <!--Character Buttons-->
-        <div style="float: right; padding-right:100px">
-            <button onclick="character_select('devestation/eligor_larington.xml')"><h1 class="georgia">Eligor</h1></button><br/>
-            <button onclick="character_select('devestation/shekhtur_lenmore.xml')"><h1 class="georgia">Shekhtur</h1></button>
+        <!--Properties-->
+        <div style="" class="property_box col-md-4">
+            <h3 id="per" class="property georgia">
+                <u class="property_header">Persistent Effects</u>
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+            <h3 id="rev" class="property georgia">
+                <u class="property_header">Reveal</u>
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+            <h3 id="sob" class="property georgia">
+                <u class="property_header">Start of Beat</u>
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+            <h3 id="bac" class="property georgia">
+                <u class="property_header">Before Activating</u>
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+            <h3 id="ohi" class="property georgia">
+                <u class="property_header">On Hit</u>
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+            <h3 id="oda" class="property georgia">
+                <u class="property_header">On Damage</u>
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+            <h3 id="aac" class="property georgia">
+                <u class="property_header">After Activating</u>
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+            <h3 id="eob" class="property georgia">
+                <u class="property_header">End of Beat</u>
+                <span class="bval"></span>
+                <span class="sval"></span>
+            </h3>
+        </div>
+
+        <!--Style and Base Pair-->
+        <div class="pair col-md-4">
+            <img src='' class='pair_style' />
+            <img src='' class='pair_base' />
         </div>
 
         <!--Statistics-->
-        <div style="text-align: right; float:right; width:300px; padding-right:100px; font-size:20px">
+        <div class="col-md-2" style="">
             <h3 id="ran" class="statistic georgia">
                 <u>Range:</u>
                 <span class="value"></span>
@@ -67,54 +122,10 @@
             </h3>
         </div>
 
-        <!--Properties-->
-        <div style="float: left; padding-left:5%" class="property_box">
-            <h3 id="per" class="property georgia">
-                <u class="property_header">Persistent Effects</u>        
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-            <h3 id="rev" class="property georgia">
-                <u class="property_header">Reveal</u>
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-            <h3 id="sob" class="property georgia">
-                <u class="property_header">Start of Beat</u>     
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-            <h3 id="bac" class="property georgia">
-                <u class="property_header">Before Activating</u> 
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-            <h3 id="ohi" class="property georgia">
-                <u class="property_header">On Hit</u>            
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-            <h3 id="oda" class="property georgia">
-                <u class="property_header">On Damage</u>         
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-            <h3 id="aac" class="property georgia">
-                <u class="property_header">After Activating</u>  
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-            <h3 id="eob" class="property georgia">
-                <u class="property_header">End of Beat</u>       
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-        </div>
-
-        <!--Style and Base Pair-->
-        <div class="pair">
-            <img src='' class='pair_style'/>
-            <img src='' class='pair_base'/>
+        <!--Character Buttons-->
+        <div style="" class="col-md-2">
+            <button onclick="character_select('devestation/eligor_larington.xml')"><h1 class="georgia">Eligor</h1></button><br />
+            <button onclick="character_select('devestation/shekhtur_lenmore.xml')"><h1 class="georgia">Shekhtur</h1></button>
         </div>
 
         <!--Scripts from the script folder-->
