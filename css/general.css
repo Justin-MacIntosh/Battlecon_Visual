@@ -33,9 +33,14 @@ body:after {
      z-index:-1;
 }
 
-.title_selected {
+.title_selected_style {
     text-decoration:underline;
-    text-shadow: -1px 0 grey, 0 1px grey, 1px 0 grey, 0 -1px grey;
+    text-shadow: -1px 0 rgb(172, 10, 10), 0 1px rgb(172, 10, 10), 1px 0 rgb(172, 10, 10), 0 -1px rgb(172, 10, 10);
+}
+
+.title_selected_base {
+    text-decoration:underline;
+    text-shadow: -1px 0 rgb(18, 15, 153), 0 1px rgb(18, 15, 153), 1px 0 rgb(18, 15, 153), 0 -1px rgb(18, 15, 153);
 }
 
 body {

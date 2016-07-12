@@ -165,17 +165,17 @@ function statistic_tag_write($stats, base_bool) {
 //BASE and STYLE header clicks
 function base_header_click() {
     $(".style_table").css("display", "none");
-    $("#style_header").removeClass("title_selected");
+    $("#style_header").removeClass("title_selected_style");
     $(".base_table").css("display", "table");
-    $("#base_header").addClass("title_selected");
+    $("#base_header").addClass("title_selected_base");
 }
 
 function style_header_click() {
     if (character_selected) {
         $(".style_table").css("display", "table");
-        $("#style_header").addClass("title_selected");
+        $("#style_header").addClass("title_selected_style");
         $(".base_table").css("display", "none");
-        $("#base_header").removeClass("title_selected");
+        $("#base_header").removeClass("title_selected_base");
     }
     else {
         alert("No Styles to Show: No Character Currently Selected");
