@@ -52,46 +52,62 @@
 
         <!--Properties-->
         <div style="" class="property_box col-md-4">
-            <h3 id="per" class="property georgia">
-                <u class="property_header">Persistent Effects</u>
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-            <h3 id="rev" class="property georgia">
-                <u class="property_header">Reveal</u>
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-            <h3 id="sob" class="property georgia">
-                <u class="property_header">Start of Beat</u>
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-            <h3 id="bac" class="property georgia">
-                <u class="property_header">Before Activating</u>
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-            <h3 id="ohi" class="property georgia">
-                <u class="property_header">On Hit</u>
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-            <h3 id="oda" class="property georgia">
-                <u class="property_header">On Damage</u>
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-            <h3 id="aac" class="property georgia">
-                <u class="property_header">After Activating</u>
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
-            <h3 id="eob" class="property georgia">
-                <u class="property_header">End of Beat</u>
-                <span class="bval"></span>
-                <span class="sval"></span>
-            </h3>
+            <div class="panel property georgia" id="per">
+                <div class="panel-heading property_header">Persistent Effects</div>
+                <div class="panel-body">
+                    <span class="bval"></span>
+                    <span class="sval"></span>
+                </div>
+            </div>
+            <div class="panel property georgia" id="rev">
+                <div class="panel-heading property_header">Reveal</div>
+                <div class="panel-body">
+                    <span class="bval"></span>
+                    <span class="sval"></span>
+                </div>
+            </div>
+            <div class="panel property georgia" id="sob">
+                <div class="panel-heading property_header">Start of Beat</div>
+                <div class="panel-body">
+                    <span class="bval"></span>
+                    <span class="sval"></span>
+                </div>
+            </div>
+            <div class="panel property georgia" id="bac">
+                <div class="panel-heading property_header">Before Activating</div>
+                <div class="panel-body">
+                    <span class="bval"></span>
+                    <span class="sval"></span>
+                </div>
+            </div>
+            <div class="panel property georgia" id="ohi">
+                <div class="panel-heading property_header">On Hit</div>
+                <div class="panel-body">
+                    <span class="bval"></span>
+                    <span class="sval"></span>
+                </div>
+            </div>
+            <div class="panel property georgia" id="oda">
+                <div class="panel-heading property_header">On Damage</div>
+                <div class="panel-body">
+                    <span class="bval"></span>
+                    <span class="sval"></span>
+                </div>
+            </div>
+            <div class="panel property georgia" id="aac">
+                <div class="panel-heading property_header">After Activating</div>
+                <div class="panel-body">
+                    <span class="bval"></span>
+                    <span class="sval"></span>
+                </div>
+            </div>
+            <div class="panel property georgia" id="eob">
+                <div class="panel-heading property_header">End of Beat</div>
+                <div class="panel-body">
+                    <span class="bval"></span>
+                    <span class="sval"></span>
+                </div>
+            </div>
         </div>
 
         <!--Style and Base Pair-->
@@ -102,30 +118,36 @@
 
         <!--Statistics-->
         <div class="col-md-2" style="">
-            <h3 id="ran" class="statistic georgia">
-                <u>Range:</u>
-                <span class="value"></span>
-                <span class="sval stat"></span>
-                <span class="bval stat"></span>
-            </h3>
-            <h3 id="pow" class="statistic georgia">
-                <u>Power:</u>
-                <span class="value"></span>
-                <span class="sval stat"></span>
-                <span class="bval stat"></span>
-            </h3>
-            <h3 id="pri" class="statistic georgia">
-                <u>Priority:</u>
-                <span class="value"></span>
-                <span class="sval stat"></span>
-                <span class="bval stat"></span>
-            </h3>
+            <div class="panel statistic georgia" id="ran">
+                <div class="panel-heading property_header">
+                    Range:
+                    <span class="value"></span>
+                    <span class="sval stat"></span>
+                    <span class="bval stat"></span>
+                </div>
+            </div>
+            <div class="panel statistic georgia" id="pow">
+                <div class="panel-heading property_header">
+                    Power:
+                    <span class="value"></span>
+                    <span class="sval stat"></span>
+                    <span class="bval stat"></span>
+                </div>
+            </div>
+            <div class="panel statistic georgia" id="pri">
+                <div class="panel-heading property_header">
+                    Priority:
+                    <span class="value"></span>
+                    <span class="sval stat"></span>
+                    <span class="bval stat"></span>
+                </div>
+            </div>
         </div>
 
         <!--Character Buttons-->
         <div style="" class="col-md-2">
-            <button onclick="character_select('devestation/eligor_larington.xml')"><h1 class="georgia">Eligor</h1></button><br />
-            <button onclick="character_select('devestation/shekhtur_lenmore.xml')"><h1 class="georgia">Shekhtur</h1></button>
+            <button type="button" class="btn btn-danger" onclick="character_select('devestation/eligor_larington.xml')"><h1 class="georgia">Eligor</h1></button><br />
+            <button type="button" class="btn btn-danger" onclick="character_select('devestation/shekhtur_lenmore.xml')"><h1 class="georgia">Shekhtur</h1></button>
         </div>
 
         <!--Scripts from the script folder-->
