@@ -3,7 +3,7 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
     <head>
         <meta charset="utf-8" />
-        <title>Battlecon Interactive</title>
+        <title>Battlecon Visual</title>
 
         <!--JQuery-->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -31,9 +31,19 @@
         <link rel="stylesheet" type="text/css" href="css/tables.css">
     </head>
     <body>
+        <!-- About -->
+        <p align="center" class="georgia title_button col-md-2">
+            <font id="about" class="clickable" data-toggle="modal" data-target="#about_modal">About</font>
+        </p>
+
         <!--Main Header-->
-        <p align="center" class="georgia section_head_p col-md-12">
-            <font id="style_header" onclick="style_header_click()">Styles</font> - <font id="base_header" onclick="base_header_click()" class="title_selected_base">Bases</font>
+        <p align="center" class="georgia section_head_p col-md-8">
+            <font id="style_header" class="clickable" onclick="style_header_click()">Styles</font> - <font id="base_header" onclick="base_header_click()" class="title_selected clickable">Bases</font>
+        </p>
+
+        <!-- Contact -->
+        <p align="center" class="georgia title_button col-md-2">
+            <font id="contact" class="clickable" data-toggle="modal" data-target="#contact_modal">Contact</font>
         </p>
 
         <!--Base Table-->
@@ -47,7 +57,7 @@
             <tr id="styles_display_row"></tr>
         </table>
 
-        <div class="col-xs-12"><hr style="width: 100%; color: black; height: 1px; background-color:black; border-top: 1px solid rgb(100, 100, 100);"/></div>
+        <div class="col-xs-12 line"><hr style="width: 100%; color: black; height: 1px; background-color:black; border-top: 1px solid rgb(100, 100, 100);"/></div>
 
         <!--Properties-->
         <div style="" class="property_box col-md-4">
@@ -143,10 +153,10 @@
             </div>
         </div>
 
-        <!--Character Buttons-->
-        <div style="" class="col-md-2">
-            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#char_modal"><h1 class="georgia char_button">Characters</h1></button>
-        </div>
+        <!--Character Button-->
+        <p align="center" class="georgia section_char col-md-2">
+            <font class="clickable" data-toggle="modal" data-target="#char_modal">Characters</font>
+        <p/>
 
         <div class="modal fade" id="char_modal" role="dialog">
             <div class="modal-dialog">
@@ -164,9 +174,51 @@
             </div>
         </div>
 
+        <div class="modal fade" id="about_modal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h1 class="modal-title georgia">About</h1>
+                    </div>
+                    <div class="modal-body georgia">
+                        <h2>In Progress...</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="contact_modal" role="dialog">
+            <div class="modal-dialog modal-lg">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h1 class="modal-title georgia">Contact</h1>
+                    </div>
+                    <div class="modal-body georgia">
+                        <h3>Justin MacIntosh: Battlecon Visual</h3>
+                        <div class="container">
+                            <h4>Email: justin.m.macintosh@gmail.com</h4>
+                            <h4>Phone: 610-613-2356</h4>
+                            <h4><a href="https://github.com/Justin-MacIntosh">My GitHub</a></h4>
+                        </div>
+
+                        <h3>D. Brad Talton: Battlecon</h3>
+                        <div class="container">
+                            <h4><a href="https://twitter.com/level99games">D. Brad Talton Twitter Account</a></h4>
+                            <h4><a href="http://battleconnection.com/">Battlecon Official Website</a> (Try out the free Print and Play!)</h4>
+                            <h4><a href="http://www.level99games.com/">Level 99 Games</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!--Scripts from the script folder-->
-        <script src="/script/startup.js"          ></script>
-        <script src="/script/click_handlers.js"   ></script>
-        <script src="/script/character_button.js" ></script>
+        <script src="/script/startup.js"></script>
+        <script src="/script/click_handlers.js"></script>
+        <script src="/script/character_button.js"></script>
     </body>
 </html>
