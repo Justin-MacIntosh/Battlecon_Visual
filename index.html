@@ -47,6 +47,8 @@
             <tr id="styles_display_row"></tr>
         </table>
 
+        <div class="col-xs-12"><hr style="width: 100%; color: black; height: 1px; background-color:black; border-top: 1px solid rgb(100, 100, 100);"/></div>
+
         <!--Properties-->
         <div style="" class="property_box col-md-4">
             <div class="panel property georgia" id="per">
@@ -143,8 +145,23 @@
 
         <!--Character Buttons-->
         <div style="" class="col-md-2">
-            <button type="button" class="btn btn-danger" onclick="character_select('devestation/eligor_larington.xml')"><h1 class="georgia">Eligor</h1></button><br />
-            <button type="button" class="btn btn-danger" onclick="character_select('devestation/shekhtur_lenmore.xml')"><h1 class="georgia">Shekhtur</h1></button>
+            <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#char_modal"><h1 class="georgia char_button">Characters</h1></button>
+        </div>
+
+        <div class="modal fade" id="char_modal" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h2 class="modal-title georgia">Characters</h2>
+                    </div>
+                    <div class="modal-body">
+                        <button type="button" class="btn btn-danger" onclick="character_select('devestation/eligor_larington.xml')"><h3 class="georgia">Eligor</h3></button>
+                        <button type="button" class="btn btn-danger" onclick="character_select('devestation/shekhtur_lenmore.xml')"><h3 class="georgia">Shekhtur</h3></button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!--Scripts from the script folder-->

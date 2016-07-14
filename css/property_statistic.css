@@ -54,6 +54,10 @@ div.secret p {
   background-color: rgba(16, 21, 40, 1);
 }
 
+.char_button {
+    margin: 10px;
+}
+
 .btn-danger {
     border-color: rgb(14, 19, 38) !important;
     background-color: rgb(16, 21, 40) !important;

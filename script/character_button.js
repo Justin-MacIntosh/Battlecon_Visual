@@ -1,10 +1,12 @@
 function character_select(character_xml) {
+    $('#char_modal').modal('hide');
     if (character_selected) {
         if (character_xml == current_xml) {
             style_header_click();
             return;
         }
     }
+
     current_xml = character_xml;
 
     $("td.style_cell").remove();
