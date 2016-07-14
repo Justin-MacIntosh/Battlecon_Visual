@@ -61,8 +61,17 @@ body:after {
     border-color:black;
     padding:10px;
     background-color:rgba(26, 31, 50,.8);
+
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    user-select: none;
 }
 .clickable:hover {
     background-color:rgba(26, 31, 50,.4);
     cursor:pointer;
+}
+.clickable:active {
+    background-color:rgba(96, 101, 120,.8);
 }
