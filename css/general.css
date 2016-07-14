@@ -46,3 +46,29 @@ body:after {
 body {
     color: #000;
 }
+
+#style_header {
+    border: solid;
+    border-width: 3px;
+    border-radius:10px;
+    padding:3px;
+    background-color:rgba(0, 0, 0,.2);
+}
+
+#base_header {
+    border: solid;
+    border-width: 3px;
+    border-radius:10px;
+    padding:3px;
+    background-color:rgba(0, 0, 0,.2);
+}
+
+#style_header:hover {
+    background-color:rgba(0, 0, 0,.4);
+    cursor: default;
+}
+
+#base_header:hover {
+    background-color:rgba(0, 0, 0,.4);
+    cursor: default;
+}

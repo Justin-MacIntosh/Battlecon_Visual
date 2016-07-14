@@ -8,7 +8,6 @@ function character_select(character_xml) {
     }
 
     current_xml = character_xml;
-
     $("td.style_cell").remove();
 
     var $row = $("#styles_display_row");
