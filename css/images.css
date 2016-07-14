@@ -34,7 +34,7 @@
 
 
 /* Style and Base Pair */
-.pair { margin: auto; padding-top:40px; text-align:center; }
+.pair { margin: auto; text-align:center; }
 
 .pair .pair_style { 
     transition: all .2s ease-in-out; 

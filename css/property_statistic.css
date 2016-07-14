@@ -6,11 +6,11 @@ div.secret p {
 }
 
 .bval {
-    font-size: 1.4em;
+    font-size: 1.3em;
     display:block; word-wrap:break-word;
 }
 .sval {
-    font-size: 1.4em;
+    font-size: 1.3em;
     display:block; word-wrap:break-word;
 }
 .property {
@@ -21,7 +21,7 @@ div.secret p {
     z-index:-1;
 }
 .property_box {
-    height:400px;
+    height:420px;
     overflow:scroll;
     overflow-x: hidden;
     overflow-y: auto;

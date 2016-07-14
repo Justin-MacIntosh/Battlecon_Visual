@@ -18,8 +18,6 @@ body:after {
 
 .section_head_p {
      font-size:500%;
-     margin-bottom:40px;
-     margin-top:30px;
      margin-right: auto;
      margin-left: auto;
      display:table;
@@ -70,7 +68,7 @@ body:after {
 }
 
 .line {
-    margin-top: 45px;
+    margin-top: 20px;
     margin-bottom: 20px;
     z-index:-1;
 }
@@ -78,5 +76,5 @@ body:after {
 .padder {
     margin-left: 55px;
     margin-right: 55px;
-    margin-top: 20px;
+    margin-top: 40px;
 }
