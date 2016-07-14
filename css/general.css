@@ -64,5 +64,5 @@ body:after {
 }
 .clickable:hover {
     background-color:rgba(26, 31, 50,.4);
-    cursor: default;
+    cursor:pointer;
 }
