@@ -10,9 +10,10 @@ body:after {
     top: 0; left: 0;
     background-image: url(/img/bckgrnd.jpg);
     background-position: center center;
+    background-repeat: repeat;
     background-size:     cover;
     width: 100%; height: 100%;
-    opacity : 0.85; z-index: -2;
+    opacity : .95; z-index: -2;
 }
 
 .section_head_p {
@@ -72,4 +73,10 @@ body:after {
     margin-top: 45px;
     margin-bottom: 20px;
     z-index:-1;
+}
+
+.padder {
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-top: 20px;
 }

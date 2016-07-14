@@ -21,7 +21,7 @@ div.secret p {
     z-index:-1;
 }
 .property_box {
-    height:450px;
+    height:400px;
     overflow:scroll;
     overflow-x: hidden;
     overflow-y: auto;
