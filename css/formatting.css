@@ -1,0 +1,24 @@
+.line {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    z-index:-1;
+}
+
+.line_hr {
+    width: 100%; 
+    color: black; 
+    height: 1px; 
+    background-color:black; 
+    border-top: 1px solid rgb(100, 100, 100);
+}
+
+.padder_top {
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-top: 40px;
+}
+
+.padder {
+    margin-left: 55px;
+    margin-right: 55px;
+}
