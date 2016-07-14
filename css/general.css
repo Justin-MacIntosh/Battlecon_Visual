@@ -20,13 +20,13 @@ body:after {
      font-size:500%;
      margin-right: auto;
      margin-left: auto;
+     margin-bottom: 0px;
      display:table;
      z-index:-1;
 }
 .section_char {
-     font-size:300%;
-     margin-bottom:40px;
-     margin-top:30px;
+     font-size:200%;
+     margin-top: 9px;
      margin-right: auto;
      margin-left: auto;
      display:table;
@@ -54,27 +54,40 @@ body:after {
 }
 
 .clickable {
-    color:white;
+    color: white;
     border: solid;
     border-width: 3px;
     border-radius:15px;
     border-color:black;
     padding:10px;
-    background-color:rgba(26, 31, 50,1);
+    background-color:rgba(26, 31, 50,.8);
 }
 .clickable:hover {
-    background-color:rgba(26, 31, 50,.6);
+    background-color:rgba(26, 31, 50,.4);
     cursor: default;
 }
 
 .line {
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
     z-index:-1;
+}
+
+.line_hr {
+    width: 100%; 
+    color: black; 
+    height: 1px; 
+    background-color:black; 
+    border-top: 1px solid rgb(100, 100, 100);
+}
+
+.padder_top {
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-top: 40px;
 }
 
 .padder {
     margin-left: 55px;
     margin-right: 55px;
-    margin-top: 40px;
 }
