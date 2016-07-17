@@ -32,22 +32,12 @@
         <link rel="stylesheet" type="text/css" href="css/formatting.css">
         <link rel="stylesheet" type="text/css" href="css/modals.css">
     </head>
+
     <body>
-        <div class="padder_top">
-            <!-- About -->
-            <p align="center" class="georgia title_button col-md-2">
-                <font id="about" class="clickable" data-toggle="modal" data-target="#about_modal">About</font>
-            </p>
-
-            <!--Main Header-->
-            <p align="center" class="georgia section_head_p col-md-8">
-                <font id="style_header" class="clickable" onclick="style_header_click()">Styles</font> - <font id="base_header" onclick="base_header_click()" class="title_selected clickable">Bases</font>
-            </p>
-
-            <!-- Contact -->
-            <p align="center" class="georgia title_button col-md-2">
-                <font id="contact" class="clickable" data-toggle="modal" data-target="#contact_modal">Contact</font>
-            </p>
+        <div class="padder_top" id="header">
+            <script>
+                $(function(){$("#header").load("/html/index/header.html");});
+            </script>
         </div>
 
         <div class="col-xs-12 line"><hr class="line_hr"/></div>
@@ -68,63 +58,10 @@
         
         <div class="padder">
             <!--Properties-->
-            <div style="padding-right: 0px;" class="property_box col-md-4">
-                <div class="panel property georgia" id="per">
-                    <div class="panel-heading property_header">Persistent Effects</div>
-                    <div class="panel-body">
-                        <span class="bval"></span>
-                        <span class="sval"></span>
-                    </div>
-                </div>
-                <div class="panel property georgia" id="rev">
-                    <div class="panel-heading property_header">Reveal</div>
-                    <div class="panel-body">
-                        <span class="bval"></span>
-                        <span class="sval"></span>
-                    </div>
-                </div>
-                <div class="panel property georgia" id="sob">
-                    <div class="panel-heading property_header">Start of Beat</div>
-                    <div class="panel-body">
-                        <span class="bval"></span>
-                        <span class="sval"></span>
-                    </div>
-                </div>
-                <div class="panel property georgia" id="bac">
-                    <div class="panel-heading property_header">Before Activating</div>
-                    <div class="panel-body">
-                        <span class="bval"></span>
-                        <span class="sval"></span>
-                    </div>
-                </div>
-                <div class="panel property georgia" id="ohi">
-                    <div class="panel-heading property_header">On Hit</div>
-                    <div class="panel-body">
-                        <span class="bval"></span>
-                        <span class="sval"></span>
-                    </div>
-                </div>
-                <div class="panel property georgia" id="oda">
-                    <div class="panel-heading property_header">On Damage</div>
-                    <div class="panel-body">
-                        <span class="bval"></span>
-                        <span class="sval"></span>
-                    </div>
-                </div>
-                <div class="panel property georgia" id="aac">
-                    <div class="panel-heading property_header">After Activating</div>
-                    <div class="panel-body">
-                        <span class="bval"></span>
-                        <span class="sval"></span>
-                    </div>
-                </div>
-                <div class="panel property georgia" id="eob">
-                    <div class="panel-heading property_header">End of Beat</div>
-                    <div class="panel-body">
-                        <span class="bval"></span>
-                        <span class="sval"></span>
-                    </div>
-                </div>
+            <div style="padding-right: 0px;" class="property_box col-md-4" id="property_box">
+                <script>
+                    $(function(){$("#property_box").load("/html/index/properties.html");});
+                </script>
             </div>
 
             <!--Style and Base Pair-->
@@ -134,31 +71,10 @@
             </div>
 
             <!--Statistics-->
-            <div class="col-md-2" style="">
-                <div class="panel statistic georgia" id="ran">
-                    <div class="panel-heading property_header">
-                        Range:
-                        <span class="value"></span>
-                        <span class="sval stat"></span>
-                        <span class="bval stat"></span>
-                    </div>
-                </div>
-                <div class="panel statistic georgia" id="pow">
-                    <div class="panel-heading property_header">
-                        Power:
-                        <span class="value"></span>
-                        <span class="sval stat"></span>
-                        <span class="bval stat"></span>
-                    </div>
-                </div>
-                <div class="panel statistic georgia" id="pri">
-                    <div class="panel-heading property_header">
-                        Priority:
-                        <span class="value"></span>
-                        <span class="sval stat"></span>
-                        <span class="bval stat"></span>
-                    </div>
-                </div>
+            <div class="col-md-2" id="statistic_box">
+                <script>
+                    $(function(){$("#statistic_box").load("/html/index/statistics.html");});
+                </script>
             </div>
 
             <!--Character Button-->
@@ -166,63 +82,25 @@
                 <font class="clickable" data-toggle="modal" data-target="#char_modal">Characters</font>
             </div>
 
+            <!--Character Modal-->
             <div class="modal char fade" id="char_modal" role="dialog">
-                <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h2 class="modal-title georgia">Characters</h2>
-                        </div>
-                        <div class="modal-body">
-                            <font style="font-size:200%" class="clickable georgia" onclick="character_select('devestation/eligor_larington.xml')">Eligor</font>
-                            <font style="font-size:200%" class="clickable georgia" onclick="character_select('devestation/shekhtur_lenmore.xml')">Shekhtur</font>
-                        </div>
-                    </div>
-                </div>
+                <script>
+                    $(function(){$("#char_modal").load("/html/index/modals/character_modal.html");});
+                </script>
             </div>
 
+            <!--About Modal-->
             <div class="modal fade" id="about_modal" role="dialog">
-                <div class="modal-dialog">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h1 class="modal-title georgia">About</h1>
-                        </div>
-                        <div class="modal-body georgia">
-                            <h4>Welcome to Battlecon Visual! This is a tool designed to make learning about Battlecon a little bit easier.</h4>
-                            <h4>On this site, you'll see the standard bases used in Battlecon. In Progress...</h4>
-                        </div>
-                    </div>
-                </div>
+                <script>
+                    $(function(){$("#about_modal").load("/html/index/modals/about_modal.html");});
+                </script>
             </div>
 
+            <!--Contact Modal-->
             <div class="modal fade" id="contact_modal" role="dialog">
-                <div class="modal-dialog modal-lg">
-                    <!-- Modal content-->
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
-                            <h1 class="modal-title georgia">Contact</h1>
-                        </div>
-                        <div class="modal-body georgia">
-                            <h3>Justin MacIntosh: Battlecon Visual</h3>
-                            <div class="container">
-                                <h4>Email: justin.m.macintosh@gmail.com</h4>
-                                <h4>Phone: 610-613-2356</h4>
-                                <h4><a href="https://github.com/Justin-MacIntosh">My GitHub</a></h4>
-                            </div>
-
-                            <h3>D. Brad Talton: Battlecon</h3>
-                            <div class="container">
-                                <h4><a href="https://twitter.com/level99games">D. Brad Talton Twitter Account</a></h4>
-                                <h4><a href="http://battleconnection.com/">Battlecon Official Website</a> (Try out the free Print and Play!)</h4>
-                                <h4><a href="http://www.level99games.com/">Level 99 Games</a></h4>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <script>
+                    $(function(){$("#contact_modal").load("/html/index/modals/contact_modal.html");});
+                </script>
             </div>
         </div>
 

@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\css",
-    "\\xml",
+    "\\html",
+    "\\script",
     "\\xml\\devestation"
   ],
-  "SelectedNode": "\\css\\formatting.css"
+  "SelectedNode": "\\script\\startup.js"
 }
