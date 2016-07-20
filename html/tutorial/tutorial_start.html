@@ -1,0 +1,85 @@
+<html>
+    <head>
+        <title>Battlecon Tutorial</title>
+
+        <!--JQuery-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+        <!--Bootstrap-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+              integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+              integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+              crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+                integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+                crossorigin="anonymous"></script>
+
+        <!--Custom Stylesheets-->
+        <link rel="stylesheet" type="text/css" href="/css/general.css">
+        <link rel="stylesheet" type="text/css" href="/css/images.css">
+        <link rel="stylesheet" type="text/css" href="/css/font.css">
+        <link rel="stylesheet" type="text/css" href="/css/property_statistic.css">
+        <link rel="stylesheet" type="text/css" href="/css/tables.css">
+        <link rel="stylesheet" type="text/css" href="/css/formatting.css">
+        <link rel="stylesheet" type="text/css" href="/css/modals.css">
+        <link rel="stylesheet" type="text/css" href="/css/tutorial.css">
+    </head>
+    <body>
+        <div class="padder_top_tut" id="header">
+            <div class="col-md-2">
+                <p align="center" class="georgia title_button">
+                    <font id="visual" class="clickable" onclick="window.location.href='/'">Battlecon Visual</font>
+                </p>
+            </div>
+            <div class="col-md-2"></div>
+
+            <div class="col-md-4">
+                <p align="center" class="georgia tut_title">
+                    <font id="tutorial_header">Battlecon Tutorial</font>
+                </p>
+            </div>
+
+            <div class="col-md-1">
+                <p align="center" class="georgia title_button">
+                    <font align="center" id="contact" class="clickable" onclick="window.location.href='/html/tutorial/tutorial2.html'">></font>
+                </p>
+            </div>
+            <div class="col-md-1"></div>
+            <div class="col-md-2">
+                <p align="center" class="georgia title_button page_number">Page 1</p>
+            </div>
+        </div>
+        <div class="col-xs-12 line"><hr class="line_hr" /></div>
+        <div class="padder">
+            <div class="col-md-1"></div>
+            <div class="col-md-10 tutorial_text georgia">
+                <h1>Welcome</h1>
+                <h3>Welcome to Battlecon! This fantasy strategy card game encapsulates the principles of fighting video games, and delivers
+                an action packed experience that will test your prediction, positioning, and forward thinking. Before we talk about what Battlecon
+                is like to play, let's get a bit of phrasing out of the way.</h3>
+
+                <h1>Terminology</h1>
+                <h3>Battlecon is a turn based game. Each turn will involve preparing a move to throw at an opponent, each player revealing their
+                move, and then resolving each person's action accordingly. In Battlecon each game turn is called a BEAT.</h3>
+                <h3>An attack in Battlecon is formed by a STYLE card (which will have red backs) and a BASE card (blue backs). These two cards
+                paired together create the ATTACK PAIR.</h3>
+                <h3>Styles are all unique to a character, while the Bases you pair them with are shared by every character. There is one exception 
+                to this rule, and that is called the UNIQUE BASE. Each character has a Unique Base, which they can pair with their styles.</h3>
+                <h3>If this is starting to get confusing, head back to Battlecon Visual and mess around with some of the Attack Pairs (currently 
+                Unique Bases are not included, so just pair Styles with standard Bases).</h3>
+                <h3>If you see how these cards match up, then you may see that they each have printed values. Any given Attack Pair has RANGE,
+                POWER, and PRIORITY. These values are important to remember, and will be explained later. In short, the Range is where the attack 
+                hits, the Power is how hard the attack hits, and the Priority is the speed of the attack. A Base has a flat value for these three
+                numbers, while Styles add or subtract value from these. For Range, if a Style has a list of values (ex. Range: "+1~2"), These values 
+                add in every possible way to create the maximum list of values possible. For example, Shot (Range 1~4) works with Martial (Range +0~1)
+                to cover every range from 1 to 5. The minimum values of these ranges are 1 and +0, and the maximum are 4 and +1, and every number in 
+                between 1 and 5 can be created by a pair of numbers from these sets.</h3>
+            </div>
+            <div class="col-md-1"></div>
+        </div>
+    </body>
+</html>

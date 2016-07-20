@@ -1,0 +1,45 @@
+.tut_title {
+    color: rgb(20, 20, 20);
+    font-size: 400%;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
+
+.padder_top_tut {
+    margin-left: 55px;
+    margin-right: 55px;
+    margin-top: 20px;
+}
+
+#tutorial_header {
+    background-color: rgba(255, 255, 255,.3);
+    padding:5px 15px;
+    border-color:rgba(255, 255, 255,0.3);
+    border-style:solid;
+}
+
+.tutorial_text {
+    color: rgb(20, 20, 20);
+    background-color: rgba(255, 255, 255,.3);
+    border-radius:15px;
+    border-color:rgba(255, 255, 255,0.3);
+    border-style:solid;
+    padding-bottom:10px;
+}
+
+.tutorial_text h1 {
+    margin-bottom: 5px;
+}
+
+.tutorial_text h3 {
+    padding: 5px;
+    margin: 0px;
+}
+
+.page_number {
+    color: rgb(20, 20, 20);
+    background-color: rgba(255, 255, 255,.3);
+    padding:5px 15px;
+    border-color:rgba(255, 255, 255,0.3);
+    border-style:solid;
+}
