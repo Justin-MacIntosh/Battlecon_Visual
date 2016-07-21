@@ -1,0 +1,81 @@
+$back-image: url(/img/bckgrnd.jpg);
+
+
+.thumbnail:hover {
+    position:relative;
+    top:-25px; left:-35px;
+    width:500px; height:auto;
+    display:block; z-index:999;
+}
+body:after {
+    content : ""; display: block;
+    position: absolute;
+    top: 0; left: 0;
+    background-image: $back-image;
+    background-position: center center;
+    background-repeat: repeat;
+    background-size:  cover;
+    width: 100%; height: 100%;
+    opacity : .95; z-index: -2;
+    background-repeat: repeat-y;
+}
+
+.section_head_p {
+     font-size:500%;
+     margin-right: auto;
+     margin-left: auto;
+     margin-bottom: 0px;
+     display:table;
+     z-index:-1;
+}
+.section_char {
+     font-size:200%;
+     margin-top: 9px;
+     margin-right: auto;
+     margin-left: auto;
+     display:table;
+     z-index:-1;
+}
+.title_button {
+     font-size:200%;
+     margin-top:30px;
+     margin-right: auto;
+     margin-left: auto;
+     display:table;
+     z-index:-1;
+}
+.pair_head_p {
+     font-size:500%;
+     margin-bottom:40px;
+     margin-top: 40px;
+     margin-right: auto;
+     margin-left: auto;
+     z-index:-1;
+}
+
+.title_selected {
+    text-decoration:underline;
+}
+
+.clickable {
+    color: white;
+    border: solid;
+    border-width: 3px;
+    border-radius:15px;
+    border-color:black;
+    padding:10px;
+    background-color:rgba(26, 31, 50,.8);
+
+    -webkit-user-select: none; /* Chrome/Safari */        
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
+    /* Rules below not implemented in browsers yet */
+    user-select: none;
+}
+.clickable:hover {
+    background-color:rgba(26, 31, 50,.4);
+    cursor:pointer;
+}
+.clickable:active {
+    background-color:rgba(96, 101, 120,.8);
+}

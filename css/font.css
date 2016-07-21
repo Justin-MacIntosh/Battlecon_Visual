@@ -1,21 +1,21 @@
 @font-face {
-   font-family: battlecon_font;
-   src: url(/font/ANGRYBLU.TTF);
+  font-family: battlecon_font;
+  src: url(/font/ANGRYBLU.TTF);
 }
 
 @font-face {
-   font-family: battlecon_cont_font;
-   src: url(/font/ANGRC___.TTF);
+  font-family: battlecon_cont_font;
+  src: url(/font/ANGRC___.TTF);
 }
 
 .battlecon_fonted {
-   font-family: battlecon_font;
+  font-family: battlecon_font;
 }
 
 .battlecon_cont_fonted {
-   font-family: battlecon_cont_font;
+  font-family: battlecon_cont_font;
 }
 
 .georgia {
-    font-family: Georgia,Times,Times New Roman,serif;
+  font-family: Georgia,Times,Times New Roman,serif;
 }

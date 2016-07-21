@@ -1,90 +1,101 @@
 .secret {
-    display:none;
+  display: none;
 }
+
 div.secret p {
-    display:none;
+  display: none;
 }
 
 .bval {
-    font-size: 1.3em;
-    display:block; word-wrap:break-word;
+  font-size: 1.3em;
+  display: block;
+  word-wrap: break-word;
 }
+
 .sval {
-    font-size: 1.3em;
-    display:block; word-wrap:break-word;
+  font-size: 1.3em;
+  display: block;
+  word-wrap: break-word;
 }
+
 .property {
-    color:white;
-    display: none;
-    border-radius: 3px;
-    background-color: rgba(26, 31, 50, 1);
-    z-index:-1;
+  color: white;
+  display: none;
+  border-radius: 3px;
+  background-color: #1a1f32;
+  z-index: -1;
 }
+
 .property_box {
-    height:420px;
-    overflow:scroll;
-    overflow-x: hidden;
-    overflow-y: auto;
+  height: 420px;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
+
 .property_header {
-    font-size:1.8em;
+  font-size: 1.8em;
 }
 
 .statistic {
-    position:relative;
-    color:white;
-    display:none;
-    border-radius: 3px;
-    background-color: rgba(26, 31, 50, 1);
+  position: relative;
+  color: white;
+  display: none;
+  border-radius: 3px;
+  background-color: #1a1f32;
 }
+
 .sval.stat {
-    display:none;
+  display: none;
 }
+
 .bval.stat {
-    display:none;
+  display: none;
 }
 
 .panel {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
+
 .property > .panel-heading {
-  background-color: rgba(16, 21, 40, 1);
+  background-color: #101528;
 }
+
 .statistic > .panel-heading {
-  background-color: rgba(16, 21, 40, 1);
+  background-color: #101528;
 }
 
 .char_button {
-    margin: 10px;
+  margin: 10px;
 }
 
 .btn-danger {
-    border-color: rgb(14, 19, 38) !important;
-    background-color: rgb(16, 21, 40) !important;
-    background-image:none;
-    border-radius: 15px !important;
-    margin: 3px;
+  border-color: #0e1326 !important;
+  background-color: #101528 !important;
+  background-image: none;
+  border-radius: 15px !important;
+  margin: 3px;
 }
 
-.btn-danger:hover
-{
-    border-color: rgb(24, 41, 106) !important;
-    background-color: rgb(37, 53, 111) !important;
-    background-image:none;
+.btn-danger:hover {
+  border-color: #18296a !important;
+  background-color: #25356f !important;
+  background-image: none;
 }
 
 .btn-danger.focus {
-  border-color: rgb(34, 39, 58) !important;
-  background-color: rgb(16, 41, 60) !important;
+  border-color: #22273a !important;
+  background-color: #10293c !important;
 }
 
 .btn-danger:active,
 .btn-danger.active,
 .open > .dropdown-toggle.btn-danger {
-  border-color: rgb(14, 19, 38) !important;
-  background-color: rgb(16, 21, 40) !important;
+  border-color: #0e1326 !important;
+  background-color: #101528 !important;
   border-radius: 15px !important;
 }
+
 .btn-danger:active:hover,
 .btn-danger.active:hover,
 .open > .dropdown-toggle.btn-danger:hover,
@@ -94,11 +105,11 @@ div.secret p {
 .btn-danger:active.focus,
 .btn-danger.active.focus,
 .open > .dropdown-toggle.btn-danger.focus {
-  border-color: rgb(14, 19, 38) !important;
-  background-color: rgb(16, 21, 40) !important;
+  border-color: #0e1326 !important;
+  background-color: #101528 !important;
 }
 
 .btn-danger .badge {
-  border-color: rgb(14, 19, 38) !important;
-  background-color: rgb(16, 21, 40) !important;
+  border-color: #0e1326 !important;
+  background-color: #101528 !important;
 }
