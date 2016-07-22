@@ -9,6 +9,7 @@ function character_select(character_xml) {
 
     current_xml = character_xml;
     $("td.style_cell").remove();
+    $("td.unique_base_cell").remove();
 
     var $row = $("#styles_display_row");
 
@@ -28,31 +29,55 @@ function character_select(character_xml) {
 function load_styles(xml, $row) {
     var i;
     var xmlDoc = xml.responseXML;
-    var x = xmlDoc.getElementsByTagName("card");
-    for (i = 0; i < x.length; i++) {
-        var tag = "<td align='center' class='style_cell'>";
-        tag += "<img src='" + x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue + "'  class='style grow rounded'/>";
+    var all_cards = xmlDoc.getElementsByTagName("card");
+    for (i = 0; i < all_cards.length; i++) {
+        var cur_card = all_cards[i];
+        if (cur_card.getElementsByTagName("unique_base").length > 0) {
+            var $base_row = $("#bases_display_row");
+            var tag = "<td align='center' class='unique_base_cell'>";
+            tag += "<img src='" + cur_card.getElementsByTagName("image")[0].childNodes[0].nodeValue + "'  class='base grow rounded'/>";
 
-        //secret statistics
-        tag += "<div id='statistics' class='secret'>";
-        var stat = x[i].getElementsByTagName("statistics")[0];
-        tag = secret_statistics(tag, stat);
-        tag += "</div>";
+            //secret statistics
+            tag += "<div id='statistics' class='secret'>";
+            var stat = cur_card.getElementsByTagName("statistics")[0];
+            tag = secret_statistics(tag, stat);
+            tag += "</div>";
 
-        //secret properties
-        tag += "<div id='properties' class='secret'>";
-        var props = x[i].getElementsByTagName("properties")[0];
-        tag = create_secret_tags(tag, props);
-        tag += "</div>";
+            //secret properties
+            tag += "<div id='properties' class='secret'>";
+            var props = cur_card.getElementsByTagName("properties")[0];
+            tag = create_secret_tags(tag, props);
+            tag += "</div>";
 
-        tag += "</td>";
-        $($row).append(tag);
+            tag += "</td>";
+            $($base_row).append(tag);
+        }
+        else {
+            var tag = "<td align='center' class='style_cell'>";
+            tag += "<img src='" + cur_card.getElementsByTagName("image")[0].childNodes[0].nodeValue + "'  class='style grow rounded'/>";
+
+            //secret statistics
+            tag += "<div id='statistics' class='secret'>";
+            var stat = cur_card.getElementsByTagName("statistics")[0];
+            tag = secret_statistics(tag, stat);
+            tag += "</div>";
+
+            //secret properties
+            tag += "<div id='properties' class='secret'>";
+            var props = cur_card.getElementsByTagName("properties")[0];
+            tag = create_secret_tags(tag, props);
+            tag += "</div>";
+
+            tag += "</td>";
+            $($row).append(tag);
+        }
     }
 
     character_selected = true;
 
     //found in '/script/click_handlers.js'
     style_click_handlers();
+    base_click_handlers();
 
     style_header_click();
 }

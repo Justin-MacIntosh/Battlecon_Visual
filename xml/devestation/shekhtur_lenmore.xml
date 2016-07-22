@@ -84,9 +84,10 @@
   </card>
 
   <!-- Shekhtur Unique Base BRAND -->
-  <!--<card>
+  <card>
     <name>Brand</name>
     <image>img/shekhtur_lenmore/shekhtur_brand.png</image>
+    <unique_base></unique_base>
     <statistics>
       <range>1,2</range>
       <power>3</power>
@@ -96,5 +97,5 @@
       <persistent>This attack ignores Stun Guard if your priority is 6 or greater.</persistent>
       <after_activating>If this attack hit, you may spend 2 or 4 Malice Tokens. For every 2 tokens you spend, the opponent you hit loses 1 life and you gain 1 life</after_activating>
     </properties>
-  </card>-->
+  </card>
 </cards>

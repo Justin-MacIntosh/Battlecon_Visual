@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\html",
-    "\\html\\index\\modals",
     "\\html\\tutorial",
+    "\\scss",
     "\\xml\\devestation"
   ],
-  "SelectedNode": "\\html\\tutorial\\tutorial2.html"
+  "SelectedNode": "\\scss\\tutorial.scss"
 }

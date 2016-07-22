@@ -34,7 +34,8 @@ div.secret p {
 }
 
 .property_header {
-  font-size: 1.8em;
+  font-size: 1.7em;
+  text-align: center;
 }
 
 .statistic {
@@ -67,49 +68,4 @@ div.secret p {
 
 .char_button {
   margin: 10px;
-}
-
-.btn-danger {
-  border-color: #0e1326 !important;
-  background-color: #101528 !important;
-  background-image: none;
-  border-radius: 15px !important;
-  margin: 3px;
-}
-
-.btn-danger:hover {
-  border-color: #18296a !important;
-  background-color: #25356f !important;
-  background-image: none;
-}
-
-.btn-danger.focus {
-  border-color: #22273a !important;
-  background-color: #10293c !important;
-}
-
-.btn-danger:active,
-.btn-danger.active,
-.open > .dropdown-toggle.btn-danger {
-  border-color: #0e1326 !important;
-  background-color: #101528 !important;
-  border-radius: 15px !important;
-}
-
-.btn-danger:active:hover,
-.btn-danger.active:hover,
-.open > .dropdown-toggle.btn-danger:hover,
-.btn-danger:active:focus,
-.btn-danger.active:focus,
-.open > .dropdown-toggle.btn-danger:focus,
-.btn-danger:active.focus,
-.btn-danger.active.focus,
-.open > .dropdown-toggle.btn-danger.focus {
-  border-color: #0e1326 !important;
-  background-color: #101528 !important;
-}
-
-.btn-danger .badge {
-  border-color: #0e1326 !important;
-  background-color: #101528 !important;
 }

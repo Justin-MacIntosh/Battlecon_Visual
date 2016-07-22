@@ -84,9 +84,10 @@
   </card>
 
   <!-- Eligor Unique Base AEGIS -->
-  <!--<card>
+  <card>
     <name>Aegis</name>
-    <image>img/eligor_larington/eligor_vengeful.jpg</image>
+    <image>img/eligor_larington/eligor_aegis.png</image>
+    <unique_base></unique_base>
     <statistics>
       <range>1</range>
       <power>X</power>
@@ -96,5 +97,5 @@
       <persistent>The power of this base is equal to the printed power of the nearest opponent's attack pair. (0 if X or N/A)</persistent>
       <reveal>Soak 1 for each Vengeance Token you anted during this beat.</reveal>
     </properties>
-  </card>-->
+  </card>
 </cards>
