@@ -98,4 +98,12 @@
       <reveal>Soak 1 for each Vengeance Token you anted during this beat.</reveal>
     </properties>
   </card>
+  
+  <!--Eligor Unique Ability-->
+  <card>
+    <name>Sword of Vengeance</name>
+    <unique_ability></unique_ability>
+    <ability>Eligor Begins the duel with 2 Vengeance Tokens. Whenever he takes damage from an attack, he gains Vengeance Tokens equal to the damage taken. He has a limit of 5 of these tokens.</ability>
+    <ability>Eligor can ante Vengeance Tokens for Stun Guard 2 each. He gains Stun Immunity if he antes 5 tokens in a single beat.</ability>
+  </card>
 </cards>

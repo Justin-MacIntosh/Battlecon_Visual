@@ -98,4 +98,12 @@
       <after_activating>If this attack hit, you may spend 2 or 4 Malice Tokens. For every 2 tokens you spend, the opponent you hit loses 1 life and you gain 1 life</after_activating>
     </properties>
   </card>
+
+  <!--Shekhtur Unique Ability-->
+  <card>
+    <name>Infernal Claw</name>
+    <unique_ability></unique_ability>
+    <ability>Shekhtur begins a duel with 3 Malice Tokens. Each time she hits an opponent with an attack, she gains one Malice Token per point of damage dealt. She cannot possess more than 5 Malice Tokes at any time.</ability>
+    <ability>Shekhtur can ante Malice Tokens for +1 Priority each.</ability>
+  </card>
 </cards>

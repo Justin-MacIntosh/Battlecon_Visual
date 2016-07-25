@@ -71,6 +71,8 @@
 
             <!--Character Button-->
             <div align="center" class="georgia section_char col-md-2">
+                <font class="clickable" data-toggle="modal" data-target="#ua_modal">Unique Ability</font>
+                <br/><br/>
                 <font class="clickable" data-toggle="modal" data-target="#char_modal">Characters</font>
             </div>
 
@@ -93,6 +95,22 @@
                 <script>
                     $(function(){$("#contact_modal").load("/html/index/modals/contact_modal.html");});
                 </script>
+            </div>
+
+            <!--Unique Ability Modal-->
+            <div class="modal fade" id="ua_modal" role="dialog">
+                <div class="modal-dialog" style="width:50%;">
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header" id="ua_head">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h1 class="modal-title georgia">Unique Ability</h1>
+                        </div>
+                        <div class="modal-body georgia" id="ua_body">
+                            <h4>No Character Selected</h4>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 

@@ -21,10 +21,9 @@ By pressing the Style and Base Headers of the page, a user can flip between sele
 
 A Tutorial for Battlecon is in progress.
 
-Unique Bases have been added for each character.
+Unique Bases ad Unique Abilities have been added for each character.
 
 ##Future Additions
-* Unique Abilities
 * Range Example
 * Larger Character Selection
 * Lore Snippets per Character

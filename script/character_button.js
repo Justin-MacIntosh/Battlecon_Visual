@@ -52,6 +52,18 @@ function load_styles(xml, $row) {
             tag += "</td>";
             $($base_row).append(tag);
         }
+        else if (cur_card.getElementsByTagName("unique_ability").length > 0) {
+            var all_abilities = cur_card.getElementsByTagName("ability");
+            var a;
+            var modal_text = "";
+            for (a = 0; a < all_abilities.length; a++) {
+                modal_text += "<h3>" + all_abilities[a].childNodes[0].nodeValue + "</h3>";
+            }
+            var head_text = "<button type='button' class='close' data-dismiss='modal'>&times;</button>";
+            head_text += "<h1 class='modal-title georgia'>" + cur_card.getElementsByTagName("name")[0].childNodes[0].nodeValue + "</h1>"
+            $("#ua_head").html(head_text);
+            $("#ua_body").html(modal_text);
+        }
         else {
             var tag = "<td align='center' class='style_cell'>";
             tag += "<img src='" + cur_card.getElementsByTagName("image")[0].childNodes[0].nodeValue + "'  class='style grow rounded'/>";
