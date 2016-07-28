@@ -27,7 +27,7 @@ div.secret p {
     overflow-y: auto;
 }
 .property_header {
-    font-size:1.7em;
+    font-size:1.8em;
     text-align: center;
 }
 
@@ -37,6 +37,7 @@ div.secret p {
     display:none;
     border-radius: 3px;
     background-color: rgba(26, 31, 50, 1);
+    z-index:-1;
 }
 .sval.stat {
     display:none;

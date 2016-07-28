@@ -1,4 +1,5 @@
 var character_selected = false;
+var pair_selected = false;
 var current_xml = "";
 
 $(document).ready(function () {

@@ -34,7 +34,7 @@ div.secret p {
 }
 
 .property_header {
-  font-size: 1.7em;
+  font-size: 1.8em;
   text-align: center;
 }
 
@@ -44,6 +44,7 @@ div.secret p {
   display: none;
   border-radius: 3px;
   background-color: #1a1f32;
+  z-index: -1;
 }
 
 .sval.stat {

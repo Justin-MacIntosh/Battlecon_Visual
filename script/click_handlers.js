@@ -145,6 +145,7 @@ function statistic_tag_write($stats, base_bool) {
         }
 
         if (final_array.length > 0) {
+            pair_selected = true;
             $(stat_ids[x]).css("display", "block");
             final_array.sort();
             total = "";
@@ -166,6 +167,8 @@ function statistic_tag_write($stats, base_bool) {
 function base_header_click() {
     $(".style_table").css("display", "none");
     $("#style_header").removeClass("title_selected");
+    $(".range_table").css("display", "none");
+    $("#range_header").removeClass("title_selected");
     $(".base_table").css("display", "table");
     $("#base_header").addClass("title_selected");
 }
@@ -174,6 +177,8 @@ function style_header_click() {
     if (character_selected) {
         $(".style_table").css("display", "table");
         $("#style_header").addClass("title_selected");
+        $(".range_table").css("display", "none");
+        $("#range_header").removeClass("title_selected");
         $(".base_table").css("display", "none");
         $("#base_header").removeClass("title_selected");
     }
@@ -181,3 +186,68 @@ function style_header_click() {
         alert("No Styles to Show: No Character Currently Selected");
     }
 }
+
+//------------------------------RANGE------------------------------
+function range_header_click() {
+    if (pair_selected) {
+        $(".style_table").css("display", "none");
+        $("#style_header").removeClass("title_selected");
+        $(".range_table").css("display", "table");
+        $("#range_header").addClass("title_selected");
+        $(".base_table").css("display", "none");
+        $("#base_header").removeClass("title_selected");
+        $("td.range_cell").remove();
+        range_table_create(0);
+    }
+    else {
+        alert("No pair currently selected.");
+    }
+}
+
+function range_table_create(current_position) {
+    var $range_row = $("#range_display_row");
+
+    var range_nums = $("#range_val").html().split(",");
+
+    var positions_targeted = [];
+
+    var i;
+    for (i = 0; i < range_nums.length; i++) {
+        var cur_num = Number(range_nums[i]);
+        positions_targeted.push(current_position - cur_num);
+        positions_targeted.push(current_position + cur_num);
+    }
+    positions_targeted = positions_targeted.sort(function (a, b) { return a - b });
+
+    var tag;
+    for (i = -3; i < 4; i++) {
+        if ($.inArray(i, positions_targeted) != -1) {
+            tag = "<td align='center' class='range_cell'>" +
+                    "<img id='" + i + "' src='/img/range/blue_hexagon.png' class='range range_within grow_range'/>" +
+                  "</td>";
+        }
+        else if (i == current_position) {
+            tag = "<td align='center' class='range_cell'>" +
+                    "<div class='imgWrapCur'><img id='" + i + "' src='/img/range/green_hexagon.png' class='range range_cur grow_range_cur'/></div>" +
+                  "</td>";
+        }
+        else {
+            tag = "<td align='center' class='range_cell'>" +
+                    "<img id='" + i + "' src='/img/range/white_hexagon.png' class='range range_transparent grow_range'/>" +
+                  "</td>";
+        }
+        $($range_row).append(tag);
+    }
+    range_click_handlers();
+}
+
+function range_click_handlers() {
+    $(".range").click(function () {
+        var $clicked = $(this);
+        var id = $clicked.attr("id");
+
+        $("td.range_cell").remove();
+        range_table_create(Number(id));
+    });
+}
+//------------------------------END RANGE------------------------------

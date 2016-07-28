@@ -14,6 +14,11 @@
   border-radius: 3px;
 }
 
+.range {
+  width: 125px;
+  height: 125px;
+}
+
 /* Pulsate Blue */
 @keyframes border-pulsate-blue {
   0% {
@@ -62,9 +67,9 @@
 
 .pair .pair_style {
   transition: all .2s ease-in-out;
-  width: 165px;
-  height: 175px;
-  padding-right: 40px;
+  width: 215px;
+  height: 225px;
+  padding-right: 53px;
   border-radius: 3px;
 }
 
@@ -74,9 +79,9 @@
 
 .pair .pair_base {
   transition: all .2s ease-in-out;
-  width: 165px;
-  height: 175px;
-  padding-left: 40px;
+  width: 215px;
+  height: 225px;
+  padding-left: 52px;
   border-radius: 3px;
 }
 

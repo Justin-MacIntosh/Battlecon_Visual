@@ -21,9 +21,10 @@ By pressing the Style and Base Headers of the page, a user can flip between sele
 
 A Tutorial for Battlecon is in progress.
 
-Unique Bases ad Unique Abilities have been added for each character.
+Unique Bases and Unique Abilities have been added for each character.
+
+A Range Helper allows for undertanding of positioning with respect to the Attack Pair.
 
 ##Future Additions
-* Range Example
 * Larger Character Selection
 * Lore Snippets per Character

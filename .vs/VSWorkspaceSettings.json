@@ -1,9 +1,11 @@
 {
   "ExpandedNodes": [
     "",
+    "\\html\\index",
     "\\html\\tutorial",
-    "\\img\\eligor_larington",
+    "\\script",
+    "\\scss",
     "\\xml\\devestation"
   ],
-  "SelectedNode": "\\README.md"
+  "SelectedNode": "\\scss\\property_statistic.scss"
 }
