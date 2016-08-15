@@ -1,5 +1,8 @@
 function character_select(character_xml) {
+    //get rid of character select modal
     $('#char_modal').modal('hide');
+
+    //if we are currently on the character we are selecting
     if (character_selected) {
         if (character_xml == current_xml) {
             style_header_click();
@@ -7,10 +10,12 @@ function character_select(character_xml) {
         }
     }
 
+    //change globals
     current_xml = character_xml;
     $("td.style_cell").remove();
     $("td.unique_base_cell").remove();
 
+    //updating styles
     var $row = $("#styles_display_row");
 
     //open character xml
@@ -32,6 +37,8 @@ function load_styles(xml, $row) {
     var all_cards = xmlDoc.getElementsByTagName("card");
     for (i = 0; i < all_cards.length; i++) {
         var cur_card = all_cards[i];
+
+        //if unique base
         if (cur_card.getElementsByTagName("unique_base").length > 0) {
             var $base_row = $("#bases_display_row");
             var tag = "<td align='center' class='unique_base_cell'>";
@@ -52,6 +59,8 @@ function load_styles(xml, $row) {
             tag += "</td>";
             $($base_row).append(tag);
         }
+
+        //if unique ability
         else if (cur_card.getElementsByTagName("unique_ability").length > 0) {
             var all_abilities = cur_card.getElementsByTagName("ability");
             var a;
@@ -64,6 +73,8 @@ function load_styles(xml, $row) {
             $("#ua_head").html(head_text);
             $("#ua_body").html(modal_text);
         }
+
+        //style
         else {
             var tag = "<td align='center' class='style_cell'>";
             tag += "<img src='" + cur_card.getElementsByTagName("image")[0].childNodes[0].nodeValue + "'  class='style grow rounded'/>";
@@ -85,11 +96,13 @@ function load_styles(xml, $row) {
         }
     }
 
+    //global update
     character_selected = true;
 
     //found in '/script/click_handlers.js'
     style_click_handlers();
     base_click_handlers();
 
+    //simulate switching to styles
     style_header_click();
 }

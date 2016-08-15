@@ -3,17 +3,22 @@
 function base_click_handlers() {
     $(".base").click(function () {
         var $clicked = $(this);
+
+        //add pulsing effect
         $(this).addClass("pulse_image_blue");
 
+        //add props and stats to html
         var $properties = $(this).nextAll("#properties");
         property_tag_write($properties, true);
 
         var $statistics = $(this).nextAll("#statistics");
         statistic_tag_write($statistics, true);
 
+        //add to pair
         var $pair_base = $(".pair_base");
         $pair_base.attr("src", $(this).attr("src"));
 
+        //remove the pulsing effect from any pulsing bases
         $('.base').each(function (i, obj) {
             var $current_base = $(this);
             if (!$clicked.is($current_base)) {
@@ -29,17 +34,22 @@ function base_click_handlers() {
 function style_click_handlers() {
     $(".style").click(function () {
         var $clicked = $(this);
+
+        //add pulsing effect
         $(this).addClass("pulse_image_red");
 
+        //add props and stats to html
         var $properties = $(this).nextAll("#properties");
         property_tag_write($properties, false);
 
         var $statistics = $(this).nextAll("#statistics");
         statistic_tag_write($statistics, false);
 
-        var $pair_base = $(".pair_style");
-        $pair_base.attr("src", $(this).attr("src"));
+        //add to pair
+        var $pair_style = $(".pair_style");
+        $pair_style.attr("src", $(this).attr("src"));
 
+        //remove the pulsing effect from any pulsing styles
         $('.style').each(function (i, obj) {
             var $current_base = $(this);
             if (!$clicked.is($current_base)) {
@@ -56,11 +66,13 @@ function style_click_handlers() {
 //------------------------------PROPERTIES------------------------------
 //Write to Property Boxes (on the left)
 function property_tag_write($props, base_bool) {
+    //arrays to store the names of important html ids and xml tag names
     var prop_ids = ["#per", "#rev", "#sob", "#bac", "#ohi", "#oda", "#aac", "#eob"];
     var prop_full_names = ["persistent", "reveal", "start_of_beat",
                            "before_activating", "on_hit", "on_damage",
                            "after_activating", "end_of_beat"];
 
+    //tell if this update is coming from style or base
     var val_class = ".bval";
     var descriptor = "B";
 
@@ -69,23 +81,28 @@ function property_tag_write($props, base_bool) {
         descriptor = "S";
     }
 
+    //clear all property tags of the type we are changing
     var i;
-
     for (i = 0; i < prop_ids.length; i++) {
         $(prop_ids[i] + " " + val_class).html("");
     }
 
+    //update them with the properties of the card
     for (i = 0; i < prop_ids.length; i++) {
         if ($("p." + prop_full_names[i], $props).length > 0) {
-            $(prop_ids[i] + " " + val_class).html(descriptor + ": " + $("p." + prop_full_names[i], $props)[0].childNodes[0].nodeValue);
+            var to_write = $("p." + prop_full_names[i], $props)[0].childNodes[0].nodeValue.replace("BREAK_HERE", "<br/>");
+            $(prop_ids[i] + " " + val_class).html(descriptor + ": " + to_write);
         }
     }
+
+    //hide any empty property boxes
     hide_unecessary_props();
 }
 
 function hide_unecessary_props() {
     var prop_ids = ["#per", "#rev", "#sob", "#bac", "#ohi", "#oda", "#aac", "#eob"];
 
+    //if the box is empty display none. Otherwise display block.
     var i;
     for (i = 0; i < prop_ids.length; i++) {
         if ($(prop_ids[i] + " .bval").is(":empty") && $(prop_ids[i] + " .sval").is(":empty")) {
@@ -100,13 +117,15 @@ function hide_unecessary_props() {
 
 
 //------------------------------STATISTICS------------------------------
-//Write to Property Boxes (on the left)
+//Write to Statistic Boxes (on the right)
 function statistic_tag_write($stats, base_bool) {
+    //arrays to store the names of important html ids and xml tag names
     var stat_ids = ["#ran", "#pow", "#pri"];
     var stat_full_names = ["range", "power", "priority"];
 
     var univ_val_class = ".value";
 
+    //tell if this update is coming from style or base
     var val_class = ".bval";
     var other_val_class = ".sval";
 
@@ -115,24 +134,29 @@ function statistic_tag_write($stats, base_bool) {
         other_val_class = ".bval";
     }
 
+    //clear all statistic tags of the type we are changing
     var i;
     for (i = 0; i < stat_ids.length; i++) {
         $(stat_ids[i] + " " + val_class).html("");
     }
 
-    var x;
-    for (x = 0; x < stat_ids.length; x++) {
+    //for each stat value
+    var cur_stat;
+    for (cur_stat = 0; cur_stat < stat_ids.length; cur_stat++) {
         var total = "Incomplete";
 
-        var current_value = $("p." + stat_full_names[x], $stats)[0].childNodes[0].nodeValue;
+        var current_value = $("p." + stat_full_names[cur_stat], $stats)[0].childNodes[0].nodeValue;
 
         var final_array = [];
 
-        var other_value = $(stat_ids[x] + " " + other_val_class).html();
+        var other_value = $(stat_ids[cur_stat] + " " + other_val_class).html();
+
+        //if there is a pair selected, we need to combine the ranges
         if (other_value != "") {
             var current_split = current_value.split(",");
             var other_split = other_value.split(",");
 
+            //splice together multiple values
             var j; var k;
             for (j = 0; j < current_split.length; j++) {
                 for (k = 0; k < other_split.length; k++) {
@@ -144,10 +168,14 @@ function statistic_tag_write($stats, base_bool) {
             }
         }
 
+        //if the stat has a displayable value
         if (final_array.length > 0) {
             pair_selected = true;
-            $(stat_ids[x]).css("display", "block");
+            $(stat_ids[cur_stat]).css("display", "block");
+
+            //sort the values
             final_array.sort();
+
             total = "";
             for (i = 0; i < final_array.length; i++) {
                 total += final_array[i];
@@ -156,14 +184,16 @@ function statistic_tag_write($stats, base_bool) {
                 }
             }
         }
-        $(stat_ids[x] + " " + univ_val_class).html(total);
-        $(stat_ids[x] + " " + val_class).html(current_value);
+
+        //display the final value, either a list of numbers or "Incomplete"
+        $(stat_ids[cur_stat] + " " + univ_val_class).html(total);
+        $(stat_ids[cur_stat] + " " + val_class).html(current_value);
     }
 }
 //------------------------------END STATISTICS------------------------------
 
 
-//BASE and STYLE header clicks
+//RANGE, BASE, and STYLE header clicks
 function base_header_click() {
     $(".style_table").css("display", "none");
     $("#style_header").removeClass("title_selected");
@@ -174,6 +204,7 @@ function base_header_click() {
 }
 
 function style_header_click() {
+    //only update everything if character selected
     if (character_selected) {
         $(".style_table").css("display", "table");
         $("#style_header").addClass("title_selected");
@@ -189,6 +220,7 @@ function style_header_click() {
 
 //------------------------------RANGE------------------------------
 function range_header_click() {
+    //if there is no pair, no range help can be given
     if (pair_selected) {
         $(".style_table").css("display", "none");
         $("#style_header").removeClass("title_selected");
@@ -242,6 +274,7 @@ function range_table_create(current_position) {
 }
 
 function range_click_handlers() {
+    //rewrite table when hexagon clicked
     $(".range").click(function () {
         var $clicked = $(this);
         var id = $clicked.attr("id");

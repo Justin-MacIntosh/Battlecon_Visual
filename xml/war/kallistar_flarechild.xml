@@ -1,0 +1,111 @@
+<cards>
+  <!-- 'Properties' Types -->
+  <!-- reveal             -->
+  <!-- start_of_beat      -->
+  <!-- before_activating  -->
+  <!-- on_hit             -->
+  <!-- on_damage          -->
+  <!-- after_activating   -->
+  <!-- end_of_beat        -->
+  <!-- persistent         -->
+
+  <!-- Kallistar Style FLARE -->
+  <card>
+    <name>Flare</name>
+    <image>img/kallistar_flarechild/kallistar_flare.png</image>
+    <statistics>
+      <range>0</range>
+      <power>3</power>
+      <priority>0</priority>
+    </statistics>
+    <properties>
+      <reveal>Human Form: Kallistar loses 3 life and has +3 Priority.</reveal>
+      <end_of_beat>Elemental Form: Kallistar returns to Human Form.</end_of_beat>
+    </properties>
+  </card>
+
+  <!-- Kallistar Style CAUSTIC -->
+  <card>
+    <name>Caustic</name>
+    <image>img/kallistar_flarechild/kallistar_caustic.png</image>
+    <statistics>
+      <range>0</range>
+      <power>1</power>
+      <priority>-1</priority>
+    </statistics>
+    <properties>
+      <persistent>Human Form: Soak 2</persistent>
+      <on_hit>Elemental Form: The opponent is stunned.</on_hit>
+    </properties>
+  </card>
+
+  <!-- Kallistar Style BLAZING -->
+  <card>
+    <name>Blazing</name>
+    <image>img/kallistar_flarechild/kallistar_blazing.png</image>
+    <statistics>
+      <range>0</range>
+      <power>0</power>
+      <priority>1</priority>
+    </statistics>
+    <properties>
+      <persistent>Elemental Form: This attack has +0~1 range.</persistent>
+      <after_activating>Human Form: Move 1 or 2 spaces.</after_activating>
+    </properties>
+  </card>
+
+  <!-- Kallistar Style IGNITION -->
+  <card>
+    <name>Ignition</name>
+    <image>img/kallistar_flarechild/kallistar_ignition.png</image>
+    <statistics>
+      <range>0</range>
+      <power>1</power>
+      <priority>-1</priority>
+    </statistics>
+    <properties>
+      <reveal>Elemental Form: This attack has +3 power, and Kallistar loses 3 life.</reveal>
+      <end_of_beat>Human Form: Kallistar enters Elemental Form.</end_of_beat>
+    </properties>
+  </card>
+
+  <!-- Kallistar Style VOLCANIC -->
+  <card>
+    <name>Volcanic</name>
+    <image>img/kallistar_flarechild/kallistar_volcanic.png</image>
+    <statistics>
+      <range>2,3,4</range>
+      <power>0</power>
+      <priority>0</priority>
+    </statistics>
+    <properties>
+      <on_hit>Elemental Form: The opponent has -2 priority next beat.</on_hit>
+      <end_of_beat>Human Form: Move directly to any unoccupied space.</end_of_beat>
+    </properties>
+  </card>
+
+  <!-- Kallistar Unique Base SPELLBOLT -->
+  <card>
+    <name>Spellbolt</name>
+    <image>img/kallistar_flarechild/kallistar_spellbolt.png</image>
+    <unique_base></unique_base>
+    <statistics>
+      <range>2,3,4,5,6</range>
+      <power>2</power>
+      <priority>3</priority>
+    </statistics>
+    <properties>
+      <on_hit>Human Form: The opponent has -2 Power.BREAK_HEREB: Elemental Form: Pull the opponent up to 2 spaces.</on_hit>
+    </properties>
+  </card>
+
+  <!--Kallistar Unique Ability-->
+  <card>
+    <name>Form of Disaster</name>
+    <unique_ability></unique_ability>
+    <ability>Kallistar begins the duel in human form.</ability>
+    <ability>Her Ignition style allows her to change to Elemental Form, and her Flare style allows her to change into Human Form. Many effects of her styles differ based on her form.</ability>
+    <ability>If Kallistar is in Elemental Form during the ante phase, she gains +2 Power and +2 Priority during the beat and loses 1 life.</ability>
+    <ability>If she is in Human Form during the ante phase, she has Soak 1 during the beat.</ability>
+  </card>
+</cards>
