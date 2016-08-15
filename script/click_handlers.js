@@ -1,6 +1,11 @@
 //------------------------------CARD CLICKS------------------------------
 //Base Card Click Handlers
 function base_click_handlers() {
+    $(document).on("contextmenu", ".base", function (e) {
+        alert('Context Menu event has fired!');
+        return false;
+    });
+
     $(".base").click(function () {
         var $clicked = $(this);
 

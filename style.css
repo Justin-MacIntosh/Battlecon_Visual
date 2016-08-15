@@ -348,6 +348,7 @@ div.secret p {
 .character_button {
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 3px;
   display: table;
 }
 

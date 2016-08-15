@@ -1,0 +1,115 @@
+<cards>
+  <!-- 'Properties' Types -->
+  <!-- reveal             -->
+  <!-- start_of_beat      -->
+  <!-- before_activating  -->
+  <!-- on_hit             -->
+  <!-- on_damage          -->
+  <!-- after_activating   -->
+  <!-- end_of_beat        -->
+  <!-- persistent         -->
+
+  <!-- Cesar Style PHALANX -->
+  <card>
+    <name>Phalanx</name>
+    <image>img/cesar_grist/cesar_phalanx.png</image>
+    <statistics>
+      <range>0,1</range>
+      <power>0</power>
+      <priority>-2</priority>
+    </statistics>
+    <properties>
+      <persistent>Stun Guard 1</persistent>
+      <before_activating>If you were hit during this beat, advance up to 1 space for each point of damage you took.</before_activating>
+    </properties>
+  </card>
+
+  <!-- Cesar Style UNSTOPPABLE -->
+  <card>
+    <name>Unstoppable</name>
+    <image>img/cesar_grist/cesar_unstoppable.png</image>
+    <statistics>
+      <range>0</range>
+      <power>0</power>
+      <priority>-2</priority>
+    </statistics>
+    <properties>
+      <persistent>Each time an opponent finishes activating a movement effect, advance 1 or 2 spaces.BREAK_HERES: When you are hit this beat, it does not trigger On Hit and On Damage effects.</persistent>
+    </properties>
+  </card>
+
+  <!-- Cesar Style INEVITABLE -->
+  <card>
+    <name>Inevitable</name>
+    <image>img/cesar_grist/cesar_inevitable.png</image>
+    <statistics>
+      <range>0</range>
+      <power>0</power>
+      <priority>0</priority>
+    </statistics>
+    <properties>
+      <persistent>Stun Guard 3</persistent>
+      <on_hit>The opponent is stunned and has -3 power during his next beat.</on_hit>
+    </properties>
+  </card>
+
+  <!-- Cesar Style BULWARK -->
+  <card>
+    <name>Bulwark</name>
+    <image>img/cesar_grist/cesar_bulwark.png</image>
+    <statistics>
+      <range>0</range>
+      <power>0</power>
+      <priority>-2</priority>
+    </statistics>
+    <properties>
+      <persistent>Stun Guard 3BREAK_HERES: Ignore movement effects applied to Cesar by opponents.</persistent>
+      <after_activating>Move up to 3 spaces.</after_activating>
+    </properties>
+  </card>
+
+  <!-- Cesar Style FUELED -->
+  <card>
+    <name>Volcanic</name>
+    <image>img/cesar_grist/cesar_fueled.png</image>
+    <statistics>
+      <range>0</range>
+      <power>1</power>
+      <priority>-1</priority>
+    </statistics>
+    <properties>
+      <start_of_beat>Gain a Threat Level. If you have 4 Threat Level Counters after this gain, you lose Stun Immunity and become stunned.</start_of_beat>
+      <before_activating>Advance 1 or 2 spaces.</before_activating>
+    </properties>
+  </card>
+
+  <!-- Cesar Unique Base SUPPRESSION -->
+  <card>
+    <name>Suppression</name>
+    <image>img/cesar_grist/cesar_suppression.png</image>
+    <unique_base></unique_base>
+    <statistics>
+      <range>1</range>
+      <power>2</power>
+      <priority>2</priority>
+    </statistics>
+    <properties>
+      <persistent>Opponents cannot move past you.BREAK_HEREB: You are not hit by attacks at range 3 or greater during this beat.</persistent>
+      <end_of_beat>Move up to 3 spaces.</end_of_beat>
+    </properties>
+  </card>
+
+  <!-- Cesar Unique Ability -->
+  <card>
+    <name>Form of Disaster</name>
+    <unique_ability></unique_ability>
+    <ability>Cesar has 4 Threat Level Counters. He begins a duel with none of these counters.</ability>
+    <ability>The first time Cesar would be defeated by damage during a duel, he remains at 1 life and becomes stunned instead.</ability>
+    <ability>During each Ante Step, he gains one Threat Level Counter and the corresponding effect below. When Cesar would gain his 5th counter, he discards all Threat Level Counters instead.</ability>
+    <ability>0 Counters: No benefit</ability>
+    <ability>1 Counters: + 1 Power, Stun Guard 1</ability>
+    <ability>2 Counters: +2 Power, Stun Guard 2</ability>
+    <ability>3 Counters: +3 Power, Stun Immunity</ability>
+    <ability>4 Counters: Become stunned, Soak 2.</ability>
+  </card>
+</cards>
