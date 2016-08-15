@@ -1,0 +1,108 @@
+<cards>
+  <!-- 'Properties' Types -->
+  <!-- reveal             -->
+  <!-- start_of_beat      -->
+  <!-- before_activating  -->
+  <!-- on_hit             -->
+  <!-- on_damage          -->
+  <!-- after_activating   -->
+  <!-- end_of_beat        -->
+  <!-- persistent         -->
+
+  <!-- Hikaru Style TRANCE -->
+  <card>
+    <name>Trance</name>
+    <image>img/hikaru_sorayama/hikaru_trance.png</image>
+    <statistics>
+      <range>0,1</range>
+      <power>0</power>
+      <priority>0</priority>
+    </statistics>
+    <properties>
+      <reveal>Return all Elemental Tokens anted this beat to your token pool. You do not gain their ante effects during this beat.</reveal>
+      <end_of_beat>Regain an Elemental Token of your choice.</end_of_beat>
+    </properties>
+  </card>
+
+  <!-- Hikaru Style FOCUSED -->
+  <card>
+    <name>Focused</name>
+    <image>img/hikaru_sorayama/hikaru_focused.png</image>
+    <statistics>
+      <range>0</range>
+      <power>0</power>
+      <priority>1</priority>
+    </statistics>
+    <properties>
+      <persistent>Stun Guard 2</persistent>
+      <on_hit>Regain an Elemental Token of your choice.</on_hit>
+    </properties>
+  </card>
+
+  <!-- Hikaru Style ADVANCING -->
+  <card>
+    <name>Advancing</name>
+    <image>img/hikaru_sorayama/hikaru_advancing.png</image>
+    <statistics>
+      <range>0</range>
+      <power>1</power>
+      <priority>1</priority>
+    </statistics>
+    <properties>
+      <start_of_beat>Advance 1 space. If you switched sides with an opponent, this attack has +1 power.</start_of_beat>
+    </properties>
+  </card>
+
+  <!-- Hikaru Style GEOMANTIC -->
+  <card>
+    <name>Geomantic</name>
+    <image>img/hikaru_sorayama/hikaru_geomantic.png</image>
+    <statistics>
+      <range>0</range>
+      <power>1</power>
+      <priority>0</priority>
+    </statistics>
+    <properties>
+      <start_of_beat>You may spend an Elemental Token to this attack (you may do this even if you anted another token this beat).</start_of_beat>
+    </properties>
+  </card>
+
+  <!-- Hikaru Style SWEEPING -->
+  <card>
+    <name>Sweeping</name>
+    <image>img/hikaru_sorayama/hikaru_sweeping.png</image>
+    <statistics>
+      <range>0</range>
+      <power>-1</power>
+      <priority>3</priority>
+    </statistics>
+    <properties>
+      <persistent>If you are hit this beat, take 2 extra damage from this attack.</persistent>
+    </properties>
+  </card>
+
+  <!-- Hikaru Unique Base PALM STRIKE -->
+  <card>
+    <name>Palm Strike</name>
+    <image>img/hikaru_sorayama/hikaru_palm_strike.png</image>
+    <unique_base></unique_base>
+    <statistics>
+      <range>1</range>
+      <power>2</power>
+      <priority>5</priority>
+    </statistics>
+    <properties>
+      <start_of_beat>Advance 1 space.</start_of_beat>
+      <on_damage>Regain an Elemental Token of your choice.</on_damage>
+    </properties>
+  </card>
+
+  <!--Hikaru Unique Ability-->
+  <card>
+    <name>Geomantic Assault</name>
+    <unique_ability></unique_ability>
+    <ability>Hikaru begins a duel with four Elemental Tokens: Fire, Water, Wind, and Earth. Hikaru cannot have more than one of each type of token.</ability>
+    <ability>Hikaru may ante up to one token each beat to gain the effect of that token applied to his attack.</ability>
+    <ability>Hikaru's styles and unique base allow him to recover Elemental Tokens. He cannot recover a token the same turn he antes it.</ability>
+  </card>
+</cards>

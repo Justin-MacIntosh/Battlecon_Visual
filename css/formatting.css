@@ -13,6 +13,16 @@
   border-bottom: 1px solid #2c3144;
 }
 
+.line_char {
+  width: 99%;
+  color: black;
+  height: 1px;
+  background-color: #646464;
+  border-top: 1px solid gray;
+  border-bottom: 1px solid gray;
+  margin-top: 0px;
+}
+
 .padder_top {
   margin-left: 55px;
   margin-right: 55px;
