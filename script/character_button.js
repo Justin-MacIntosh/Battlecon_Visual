@@ -10,14 +10,6 @@ function character_select(character_xml) {
         }
     }
 
-    //-------------URL STUFF-------------
-    var set = character_xml.split("/")[0];
-    var char = character_xml.split("/")[1].replace(".xml", "");
-
-    update_url_query("set", set);
-    update_url_query("character", char);
-    //-------------END URL STUFF-------------
-
     //change globals
     current_xml = character_xml;
     $("td.style_cell").remove();
@@ -52,7 +44,17 @@ function load_styles(xml, $row) {
             var tag = "<td align='center' class='unique_base_cell'>";
             tag += "<img src='" + cur_card.getElementsByTagName("image")[0].childNodes[0].nodeValue + "'  class='base grow rounded'/>";
 
-            tag = create_secret_tags(cur_card, tag);
+            //secret statistics
+            tag += "<div id='statistics' class='secret'>";
+            var stat = cur_card.getElementsByTagName("statistics")[0];
+            tag = secret_statistics(tag, stat);
+            tag += "</div>";
+
+            //secret properties
+            tag += "<div id='properties' class='secret'>";
+            var props = cur_card.getElementsByTagName("properties")[0];
+            tag = create_secret_tags(tag, props);
+            tag += "</div>";
 
             tag += "</td>";
             $($base_row).append(tag);
@@ -77,7 +79,17 @@ function load_styles(xml, $row) {
             var tag = "<td align='center' class='style_cell'>";
             tag += "<img src='" + cur_card.getElementsByTagName("image")[0].childNodes[0].nodeValue + "'  class='style grow rounded'/>";
 
-            tag = create_secret_tags(cur_card, tag);
+            //secret statistics
+            tag += "<div id='statistics' class='secret'>";
+            var stat = cur_card.getElementsByTagName("statistics")[0];
+            tag = secret_statistics(tag, stat);
+            tag += "</div>";
+
+            //secret properties
+            tag += "<div id='properties' class='secret'>";
+            var props = cur_card.getElementsByTagName("properties")[0];
+            tag = create_secret_tags(tag, props);
+            tag += "</div>";
 
             tag += "</td>";
             $($row).append(tag);
@@ -93,12 +105,4 @@ function load_styles(xml, $row) {
 
     //simulate switching to styles
     style_header_click();
-    doc_ready = true;
-}
-
-function select_card(card_name) {
-    setTimeout(function () {
-        var card = $("#" + card_name.replace(" ","_")).parent().prevAll("img");
-        card.click();
-    }, 100);
 }
