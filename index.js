@@ -15,9 +15,7 @@ app.use('*', function (req, res, next) {
             
             var loaded = load_character(req.query['set'], req.query['character'], $);
 
-            if (loaded) {
-                load_cards(req.query['base'], req.query['style'], $);
-            }
+            load_cards(req.query['base'], req.query['style'], $);
 
             res.write($("html")[0].innerHTML);
             res.end();
