@@ -1,6 +1,7 @@
 function update_url_query(value, change_to) {
     var myURL = document.location.href;
     var split_query = myURL.split("?");
+    var query = "";
     if (split_query[1]) {
         var split_for = split_query[1].split("&");
         var cur_chunk;
@@ -11,12 +12,16 @@ function update_url_query(value, change_to) {
                 found = true;
             }
         }
-        var query = split_for.join("&");
+        query = split_for.join("&");
+
+        if (!found) {
+            query += "&" + value + "=" + change_to;
+        }
+    }
+    else {
+        query = value + "=" + change_to;
     }
 
-    if (!found) {
-        query += "&" + value + "=" + change_to;
-    }
     history.pushState("", "", "?" + query);
 }
 
