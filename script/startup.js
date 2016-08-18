@@ -22,20 +22,12 @@ function load_bases(xml, $row) {
     var xmlDoc = xml.responseXML;
     var x = xmlDoc.getElementsByTagName("card");
     for (i = 0; i < x.length; i++) {
+        var cur_card = x[i];
+
         var tag = "<td align='center' class='base_cell'>";
         tag += "<img src='" + x[i].getElementsByTagName("image")[0].childNodes[0].nodeValue + "'  class='base grow rounded'/>";
 
-        //secret statistics
-        tag += "<div id='statistics' class='secret'>";
-        var stat = x[i].getElementsByTagName("statistics")[0];
-        tag = secret_statistics(tag, stat);
-        tag += "</div>";
-
-        //secret properties
-        tag += "<div id='properties' class='secret'>";
-        var props = x[i].getElementsByTagName("properties")[0];
-        tag = create_secret_tags(tag, props);
-        tag += "</div>";
+        tag = create_secret_tags(cur_card, tag);
 
         tag += "</td>";
         $($row).append(tag);
@@ -57,7 +49,7 @@ function secret_statistics(tag, stat) {
     return tag;
 }
 
-function create_secret_tags(tag, props) {
+function secret_props(tag, props) {
     var prop_full_names = ["persistent", "reveal", "start_of_beat",
                            "before_activating", "on_hit", "on_damage",
                            "after_activating", "end_of_beat"];
@@ -67,5 +59,27 @@ function create_secret_tags(tag, props) {
             tag += "<p class='" + prop_full_names[i] + "'>" + props.getElementsByTagName(prop_full_names[i])[0].childNodes[0].nodeValue + "</p>";
         }
     }
+    return tag;
+}
+
+function create_secret_tags(cur_card, tag) {
+    //secret statistics
+    tag += "<div id='statistics' class='secret'>";
+    var stat = cur_card.getElementsByTagName("statistics")[0];
+    tag = secret_statistics(tag, stat);
+    tag += "</div>";
+
+    //secret properties
+    tag += "<div id='properties' class='secret'>";
+    var props = cur_card.getElementsByTagName("properties")[0];
+    tag = secret_props(tag, props);
+    tag += "</div>";
+
+    //secret name
+    tag += "<div id='card_name' class='secret'>";
+    var name = cur_card.getElementsByTagName("name")[0];
+    tag += "<p id='" + name.childNodes[0].nodeValue.toLowerCase().replace(" ", "_") + "'/>";
+    tag += "</div>";
+
     return tag;
 }

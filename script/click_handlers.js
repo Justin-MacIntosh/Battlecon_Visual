@@ -1,10 +1,30 @@
+function update_url_query(value, change_to) {
+    var myURL = document.location.href;
+    var split_query = myURL.split("?");
+    var split_for = split_query[1].split("&");
+    var cur_chunk;
+    var found = false;
+    for (cur_chunk = 0; cur_chunk < split_for.length; cur_chunk++) {
+        if (split_for[cur_chunk].split("=")[0] === value) {
+            split_for[cur_chunk] = value + "=" + change_to;
+            found = true;
+        }
+    }
+    var query = split_for.join("&");
+
+    if (!found) {
+        query += "&" + value + "=" + change_to;
+    }
+    history.pushState("", "", "?" + query);
+}
+
 //------------------------------CARD CLICKS------------------------------
 //Base Card Click Handlers
 function base_click_handlers() {
-    $(document).on("contextmenu", ".base", function (e) {
+    /*$(document).on("contextmenu", ".base", function (e) {
         alert('Context Menu event has fired!');
         return false;
-    });
+    });*/
 
     $(".base").click(function () {
         var $clicked = $(this);
@@ -18,6 +38,11 @@ function base_click_handlers() {
 
         var $statistics = $(this).nextAll("#statistics");
         statistic_tag_write($statistics, true);
+
+        var $card_name = $(this).nextAll("#card_name");
+        var id = $card_name.children("p").attr('id');
+
+        update_url_query("base", id);
 
         //add to pair
         var $pair_base = $(".pair_base");
@@ -49,6 +74,10 @@ function style_click_handlers() {
 
         var $statistics = $(this).nextAll("#statistics");
         statistic_tag_write($statistics, false);
+
+        var $card_name = $(this).nextAll("#card_name");
+        var id = $card_name.children("p").attr('id');
+        update_url_query("style", id);
 
         //add to pair
         var $pair_style = $(".pair_style");

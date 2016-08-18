@@ -2,10 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\html\\index",
-    "\\html\\tutorial",
-    "\\script",
-    "\\scss",
-    "\\xml\\devestation"
+    "\\html\\index\\modals",
+    "\\img\\cesar_grist",
+    "\\img\\eligor_larington",
+    "\\img\\hikaru_sorayama",
+    "\\img\\kallistar_flarechild",
+    "\\img\\range",
+    "\\img\\shekhtur_lenmore",
+    "\\img\\standard_bases"
   ],
-  "SelectedNode": "\\README.md"
+  "SelectedNode": "\\img"
 }
