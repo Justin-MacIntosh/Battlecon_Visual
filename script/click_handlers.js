@@ -1,7 +1,7 @@
 function update_url_query(value, change_to) {
     var myURL = document.location.href;
     var split_query = myURL.split("?");
-    if (split_query[1] != "") {
+    if (split_query[1]) {
         var split_for = split_query[1].split("&");
         var cur_chunk;
         var found = false;
