@@ -67,7 +67,7 @@
 
   <!-- Standard Base BURST -->
   <card>
-    <name>Shot</name>
+    <name>Burst</name>
     <image>img/standard_bases/base_burst.png</image>
     <statistics>
       <range   >2,3</range>
