@@ -1,16 +1,18 @@
 function update_url_query(value, change_to) {
     var myURL = document.location.href;
     var split_query = myURL.split("?");
-    var split_for = split_query[1].split("&");
-    var cur_chunk;
-    var found = false;
-    for (cur_chunk = 0; cur_chunk < split_for.length; cur_chunk++) {
-        if (split_for[cur_chunk].split("=")[0] === value) {
-            split_for[cur_chunk] = value + "=" + change_to;
-            found = true;
+    if (split_query[1] != "") {
+        var split_for = split_query[1].split("&");
+        var cur_chunk;
+        var found = false;
+        for (cur_chunk = 0; cur_chunk < split_for.length; cur_chunk++) {
+            if (split_for[cur_chunk].split("=")[0] === value) {
+                split_for[cur_chunk] = value + "=" + change_to;
+                found = true;
+            }
         }
+        var query = split_for.join("&");
     }
-    var query = split_for.join("&");
 
     if (!found) {
         query += "&" + value + "=" + change_to;
